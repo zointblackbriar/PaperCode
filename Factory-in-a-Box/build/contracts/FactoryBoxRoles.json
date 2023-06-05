@@ -1,0 +1,166 @@
+{
+  "contractName": "FactoryBoxRoles",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getType",
+      "outputs": [
+        {
+          "internalType": "enum Constants.ClassType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getType\",\"outputs\":[{\"internalType\":\"enum Constants.ClassType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/FactoryBoxRoles.sol\":\"FactoryBoxRoles\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/FactoryBoxRoles.sol\":{\"keccak256\":\"0xce0db7ffe569f5c5d49b9cd6580f76b8d5851f1b1f6ec915fd2b6b4bc7516760\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6d9e0de036d741c4418bea50be42aedf198a383c713fcc5b10ffb304e2beaf1\",\"dweb:/ipfs/QmZZ99PfQfabPcoPURhFwi5CvdUcLjdG1QsV3fjC3dCMSE\"]},\"project:/contracts/RoleLibrary.sol\":{\"keccak256\":\"0x1cdba3b9da47708feb55b2e6241e159f6ca2bb9e9ce22124d469f3d7836a7109\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0731f1ce921c9681aaac5e521a8211282d2d7b282ff929f65cf85780c21708f8\",\"dweb:/ipfs/QmRDVchuKnJPgDT1HrwWbSLgp8M4dViwK2DgX6MAMKyKgZ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "//SPDX-License-Identifier: MIT \npragma solidity >=0.8.7; \n\nimport \"./RoleLibrary.sol\";\n\nabstract contract FactoryBoxRoles {\n    function getType() public pure virtual returns(Constants.ClassType); \n}\n",
+  "sourcePath": "/media/zoint/D0F4-36FA/AllFiles/Projeler/zointblackbriar/Smart_Contract_Examples/Factory-in-a-Box/contracts/FactoryBoxRoles.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/FactoryBoxRoles.sol",
+    "exportedSymbols": {
+      "Constants": [
+        190
+      ],
+      "FactoryBoxRoles": [
+        183
+      ]
+    },
+    "id": 184,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 175,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".7"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:4"
+      },
+      {
+        "absolutePath": "project:/contracts/RoleLibrary.sol",
+        "file": "./RoleLibrary.sol",
+        "id": 176,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 184,
+        "sourceUnit": 191,
+        "src": "59:27:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": false,
+        "id": 183,
+        "linearizedBaseContracts": [
+          183
+        ],
+        "name": "FactoryBoxRoles",
+        "nameLocation": "106:15:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "15dae03e",
+            "id": 182,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getType",
+            "nameLocation": "137:7:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 177,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "144:2:4"
+            },
+            "returnParameters": {
+              "id": 181,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 180,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 182,
+                  "src": "175:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_ClassType_$189",
+                    "typeString": "enum Constants.ClassType"
+                  },
+                  "typeName": {
+                    "id": 179,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 178,
+                      "name": "Constants.ClassType",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 189,
+                      "src": "175:19:4"
+                    },
+                    "referencedDeclaration": 189,
+                    "src": "175:19:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_ClassType_$189",
+                      "typeString": "enum Constants.ClassType"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "174:21:4"
+            },
+            "scope": 183,
+            "src": "128:68:4",
+            "stateMutability": "pure",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "scope": 184,
+        "src": "88:111:4",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:168:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-07-26T16:50:36.052Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
