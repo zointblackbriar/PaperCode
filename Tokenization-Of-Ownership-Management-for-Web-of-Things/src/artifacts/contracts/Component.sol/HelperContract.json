@@ -1,0 +1,24 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "HelperContract",
+  "sourceName": "contracts/Component.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "foo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50607780601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063c298557814602d575b600080fd5b600060405190815260200160405180910390f3fea2646970667358221220b363cf97d85bdb9f2ecddd5ed12a612236ff7628fb9d30db9f2d5893ef5be97064736f6c63430008070033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063c298557814602d575b600080fd5b600060405190815260200160405180910390f3fea2646970667358221220b363cf97d85bdb9f2ecddd5ed12a612236ff7628fb9d30db9f2d5893ef5be97064736f6c63430008070033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
