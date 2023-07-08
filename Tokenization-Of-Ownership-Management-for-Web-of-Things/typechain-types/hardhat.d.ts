@@ -225,6 +225,22 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.AccessControlMediator__factory>;
     getContractFactory(
+      name: "Employee",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Employee__factory>;
+    getContractFactory(
+      name: "Manager888",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Manager888__factory>;
+    getContractFactory(
+      name: "EmployeeRole",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.EmployeeRole__factory>;
+    getContractFactory(
+      name: "AccessControlMediator",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.AccessControlMediator__factory>;
+    getContractFactory(
       name: "Administrator",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Administrator__factory>;
@@ -304,6 +320,10 @@ declare module "hardhat/types/runtime" {
       name: "MManager",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MManager__factory>;
+    getContractFactory(
+      name: "Receiver",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.Receiver__factory>;
     getContractFactory(
       name: "Resource",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -579,6 +599,26 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.AccessControlMediator>;
     getContractAt(
+      name: "Employee",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Employee>;
+    getContractAt(
+      name: "Manager888",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Manager888>;
+    getContractAt(
+      name: "EmployeeRole",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.EmployeeRole>;
+    getContractAt(
+      name: "AccessControlMediator",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.AccessControlMediator>;
+    getContractAt(
       name: "Administrator",
       address: string,
       signer?: ethers.Signer
@@ -678,6 +718,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.MManager>;
+    getContractAt(
+      name: "Receiver",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.Receiver>;
     getContractAt(
       name: "Resource",
       address: string,

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.7;
-import "../mEmployeeRole.sol";
+import "../EmployeeRole.sol";
 
 interface IAuditor {
     function inspectInventory() external returns (string memory);

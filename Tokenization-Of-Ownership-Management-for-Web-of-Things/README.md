@@ -117,3 +117,43 @@ Reason: The event logs are not accessible from within smart contracts. Basically
 smart contracts in the blockchain, not with an external client.
 
 When you test smart contracts with your test cases, you are an external client and you can catch events. You can put console.log with "hardhat/console.sol" library because the application itself behaves as an external client within smart contracts through hardhat framework.
+
+
+## INTEGRATION WITH Web Of Things (Eclipse web of things)
+
+Please install the following package through npm command: 
+
+```bash
+npm install @node-wot/core
+npm i @node-wot/binding-http
+```
+
+Run the server application with the following command
+
+```bash
+npx ts-node test/Web0
+```
+
+Interaction with the hardhat development suite
+
+Open the blockchain network with the following command: 
+
+```bash
+npx hardhat node
+```
+
+```bash
+npx hardhat run --network localhost scripts/deploy.js
+```
+
+Connect to the hardhat console at localhost: 
+
+```bash
+npx hardhat console --network localhost
+```
+
+Interact with your contract: 
+
+
+
+

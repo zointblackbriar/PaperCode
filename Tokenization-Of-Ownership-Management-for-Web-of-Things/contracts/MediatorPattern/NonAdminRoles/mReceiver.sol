@@ -1,6 +1,6 @@
 pragma solidity ^0.8.7;
 
-import "../mEmployeeRole.sol";
+import "../EmployeeRole.sol";
 import "../../Resource.sol";
 
 import "hardhat/console.sol";

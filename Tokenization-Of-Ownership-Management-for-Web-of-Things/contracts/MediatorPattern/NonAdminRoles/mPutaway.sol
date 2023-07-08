@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.7;
 import "./mReceiver.sol";
-import "../mEmployeeRole.sol";
+import "../EmployeeRole.sol";
 
 interface IPutaway {
     function putawayInventory(uint256 AssetId, Verifier verifier,Issuer issuer) external returns (string memory);

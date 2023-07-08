@@ -5,6 +5,8 @@
   "dependencies": {
     "@chainlink/contracts": "^0.6.0",
     "@erc725/smart-contracts": "^4.1.1",
+    "@node-wot/binding-http": "^0.8.7",
+    "@node-wot/core": "^0.8.7",
     "@openzeppelin/contracts": "^4.7.2",
     "@syncfusion/ej2-react-navigations": "^20.2.45",
     "@testing-library/jest-dom": "^5.16.5",
@@ -62,7 +64,7 @@
     "@types/node": "^18.11.18",
     "chai": "^4.3.7",
     "ethereum-waffle": "^4.0.8",
-    "ethers": "^5.7.0",
+    "ethers": "^5.7.2",
     "hardhat-gas-reporter": "^1.0.9",
     "solidity-coverage": "^0.8.2",
     "ts-node": "^10.9.1",

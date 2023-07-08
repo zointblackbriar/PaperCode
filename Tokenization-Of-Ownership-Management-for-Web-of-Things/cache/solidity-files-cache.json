@@ -1,8 +1,8 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/APIConsumer.sol": {
-      "lastModificationDate": 1685894593837,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/APIConsumer.sol": {
+      "lastModificationDate": 1687075529321,
       "contentHash": "4982dd0fda9fd766a70fcf6ec7f03769",
       "sourceName": "contracts/APIConsumer.sol",
       "solcConfig": {
@@ -38,8 +38,8 @@
         "APIConsumer"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/ChainlinkClient.sol": {
-      "lastModificationDate": 1685896756665,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/ChainlinkClient.sol": {
+      "lastModificationDate": 1688442195419,
       "contentHash": "6af479cbde42f1a7225c9cebc6e32239",
       "sourceName": "@chainlink/contracts/src/v0.8/ChainlinkClient.sol",
       "solcConfig": {
@@ -81,8 +81,8 @@
         "ChainlinkClient"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/Chainlink.sol": {
-      "lastModificationDate": 1685896756507,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/Chainlink.sol": {
+      "lastModificationDate": 1688442195287,
       "contentHash": "9dc050539cdf1579d5650d41d0df9ec2",
       "sourceName": "@chainlink/contracts/src/v0.8/Chainlink.sol",
       "solcConfig": {
@@ -119,8 +119,8 @@
         "Chainlink"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/ENSInterface.sol": {
-      "lastModificationDate": 1685896758212,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/ENSInterface.sol": {
+      "lastModificationDate": 1688442196269,
       "contentHash": "06b6aefcae95de6d1597ad8e1d73a08b",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/ENSInterface.sol",
       "solcConfig": {
@@ -154,8 +154,113 @@
         "ENSInterface"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/ChainlinkRequestInterface.sol": {
-      "lastModificationDate": 1685896756866,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol": {
+      "lastModificationDate": 1688442199054,
+      "contentHash": "da5a0c3bd86c896f6a407f909c57edf3",
+      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "LinkTokenInterface"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/PointerInterface.sol": {
+      "lastModificationDate": 1688442200216,
+      "contentHash": "27da4b2007d200dd5afff31dbf31ac99",
+      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/PointerInterface.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PointerInterface"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/vendor/ENSResolver.sol": {
+      "lastModificationDate": 1688442196309,
+      "contentHash": "24a98b0606654e662097eed9ffa91a11",
+      "sourceName": "@chainlink/contracts/src/v0.8/vendor/ENSResolver.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ENSResolver"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/ChainlinkRequestInterface.sol": {
+      "lastModificationDate": 1688442195529,
       "contentHash": "14407a6ead15cff8a0e0a7f8037c68f5",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/ChainlinkRequestInterface.sol",
       "solcConfig": {
@@ -189,8 +294,8 @@
         "ChainlinkRequestInterface"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/OperatorInterface.sol": {
-      "lastModificationDate": 1685896762316,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/OperatorInterface.sol": {
+      "lastModificationDate": 1688442199580,
       "contentHash": "e1822c36361fc3a26b5a68df3ddab15d",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/OperatorInterface.sol",
       "solcConfig": {
@@ -227,113 +332,8 @@
         "OperatorInterface"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/PointerInterface.sol": {
-      "lastModificationDate": 1685896763250,
-      "contentHash": "27da4b2007d200dd5afff31dbf31ac99",
-      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/PointerInterface.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "PointerInterface"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol": {
-      "lastModificationDate": 1685896760648,
-      "contentHash": "da5a0c3bd86c896f6a407f909c57edf3",
-      "sourceName": "@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "LinkTokenInterface"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/vendor/ENSResolver.sol": {
-      "lastModificationDate": 1685896758274,
-      "contentHash": "24a98b0606654e662097eed9ffa91a11",
-      "sourceName": "@chainlink/contracts/src/v0.8/vendor/ENSResolver.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ENSResolver"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol": {
-      "lastModificationDate": 1685896756207,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol": {
+      "lastModificationDate": 1688442195171,
       "contentHash": "99b3ee2c29bc0d1a5cba583d9e8d835e",
       "sourceName": "@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol",
       "solcConfig": {
@@ -369,8 +369,8 @@
         "CBORChainlink"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol": {
-      "lastModificationDate": 1685896756017,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol": {
+      "lastModificationDate": 1688442195100,
       "contentHash": "52ac6f99fb0635751ae4ed11139878fd",
       "sourceName": "@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol",
       "solcConfig": {
@@ -404,8 +404,8 @@
         "BufferChainlink"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/OracleInterface.sol": {
-      "lastModificationDate": 1685896762572,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.8/interfaces/OracleInterface.sol": {
+      "lastModificationDate": 1688442199696,
       "contentHash": "6283e42024961596926c2b5015eef8e0",
       "sourceName": "@chainlink/contracts/src/v0.8/interfaces/OracleInterface.sol",
       "solcConfig": {
@@ -439,8 +439,8 @@
         "OracleInterface"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MockOracleClient.sol": {
-      "lastModificationDate": 1685894593888,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MockOracleClient.sol": {
+      "lastModificationDate": 1687075529330,
       "contentHash": "f4fb90c2191fc1006024cbceab8515ad",
       "sourceName": "contracts/MockOracleClient.sol",
       "solcConfig": {
@@ -478,8 +478,8 @@
         "MockOracleClient"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/hardhat/console.sol": {
-      "lastModificationDate": 1685896756559,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1688442195539,
       "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -513,8 +513,8 @@
         "console"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1685896746463,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1688442189843,
       "contentHash": "e436cea06129be2c73cda4b1acc848b5",
       "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -550,8 +550,8 @@
         "Ownable"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1685896733742,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1688442181289,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -585,8 +585,8 @@
         "Context"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
-      "lastModificationDate": 1685896738683,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol": {
+      "lastModificationDate": 1688442184445,
       "contentHash": "a1c7f80ae26f5b2d7d563475627fbf25",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol",
       "solcConfig": {
@@ -623,8 +623,8 @@
         "ERC20Burnable"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
-      "lastModificationDate": 1685896738598,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1688442184368,
       "contentHash": "af7bd64e1cfefbf6cb07f2adc1a25392",
       "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
       "solcConfig": {
@@ -662,8 +662,8 @@
         "ERC20"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
-      "lastModificationDate": 1685896744553,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1688442187807,
       "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
       "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
       "solcConfig": {
@@ -697,8 +697,8 @@
         "IERC20"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
-      "lastModificationDate": 1685896744626,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1688442187852,
       "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
       "sourceName": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
       "solcConfig": {
@@ -734,8 +734,8 @@
         "IERC20Metadata"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/FractionalNFT.sol": {
-      "lastModificationDate": 1685894593852,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/FractionalNFT.sol": {
+      "lastModificationDate": 1687075529324,
       "contentHash": "f8e082447cb80f754c8355c561513c09",
       "sourceName": "contracts/FractionalNFT.sol",
       "solcConfig": {
@@ -781,8 +781,8 @@
         "FractionalNFT"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/FNFToken.sol": {
-      "lastModificationDate": 1685894593849,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/FNFToken.sol": {
+      "lastModificationDate": 1687075529323,
       "contentHash": "ccd816dad8d39e09afdfbb9bd80b64fb",
       "sourceName": "contracts/FNFToken.sol",
       "solcConfig": {
@@ -824,8 +824,43 @@
         "FNFToken"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/security/Pausable.sol": {
-      "lastModificationDate": 1685896746522,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1688442181319,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/security/Pausable.sol": {
+      "lastModificationDate": 1688442189956,
       "contentHash": "25c8108f36fdd472bc78d4c4af240c11",
       "sourceName": "@openzeppelin/contracts/security/Pausable.sol",
       "solcConfig": {
@@ -861,43 +896,8 @@
         "Pausable"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
-      "lastModificationDate": 1685896733801,
-      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
-      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Counters"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1685896740248,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1688442185409,
       "contentHash": "79ff1a7eb801a525aa315fb7a679eede",
       "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
       "solcConfig": {
@@ -939,83 +939,8 @@
         "ERC721"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
-      "lastModificationDate": 1685896740404,
-      "contentHash": "88095889e59d16821879a8083f906503",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../ERC721.sol",
-        "./IERC721Enumerable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC721Enumerable"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
-      "lastModificationDate": 1685896741068,
-      "contentHash": "8af32effd0536e2971ff8496812a5016",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../ERC721.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC721URIStorage"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol": {
-      "lastModificationDate": 1685896740354,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol": {
+      "lastModificationDate": 1688442185463,
       "contentHash": "527e36af89e16c5f3cf37c35a26c2b1b",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol",
       "solcConfig": {
@@ -1052,8 +977,83 @@
         "ERC721Burnable"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1685896747415,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
+      "lastModificationDate": 1688442185859,
+      "contentHash": "8af32effd0536e2971ff8496812a5016",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721URIStorage"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol": {
+      "lastModificationDate": 1688442185481,
+      "contentHash": "88095889e59d16821879a8083f906503",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../ERC721.sol",
+        "./IERC721Enumerable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721Enumerable"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1688442190670,
       "contentHash": "cf46906c4035f51639a22265066a9e78",
       "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
       "solcConfig": {
@@ -1087,8 +1087,8 @@
         "Strings"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1685896745274,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1688442188222,
       "contentHash": "c22d4395e33763de693fd440c6fd10e1",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
       "solcConfig": {
@@ -1122,8 +1122,8 @@
         "IERC721Receiver"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1685896732734,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1688442180716,
       "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
       "sourceName": "@openzeppelin/contracts/utils/Address.sol",
       "solcConfig": {
@@ -1157,8 +1157,8 @@
         "Address"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1685896737958,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1688442183920,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
       "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
       "solcConfig": {
@@ -1194,8 +1194,8 @@
         "ERC165"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1685896745020,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1688442188073,
       "contentHash": "ec99d946db3685a3630554aa6055bd7f",
       "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
       "solcConfig": {
@@ -1231,8 +1231,8 @@
         "IERC721"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1685896745201,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1688442188188,
       "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
@@ -1268,8 +1268,8 @@
         "IERC721Metadata"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1685896744246,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1688442187691,
       "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
       "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
       "solcConfig": {
@@ -1303,8 +1303,8 @@
         "IERC165"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
-      "lastModificationDate": 1685896745137,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
+      "lastModificationDate": 1688442188133,
       "contentHash": "f4dd06783f321aa26179bc2b6e361c29",
       "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol",
       "solcConfig": {
@@ -1340,83 +1340,8 @@
         "IERC721Enumerable"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
-      "lastModificationDate": 1685896732298,
-      "contentHash": "e6ef731d275b1e7b2995f00fa56d9dab",
-      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IAccessControl.sol",
-        "../utils/Context.sol",
-        "../utils/Strings.sol",
-        "../utils/introspection/ERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControl"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
-      "lastModificationDate": 1685896742508,
-      "contentHash": "57c84298234411cea19c7c284d86be8b",
-      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IAccessControl"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Fractional.sol": {
-      "lastModificationDate": 1685894593850,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Fractional.sol": {
+      "lastModificationDate": 1687075529324,
       "contentHash": "b86d456fc6bdebf1e3ae40682a629926",
       "sourceName": "contracts/Fractional.sol",
       "solcConfig": {
@@ -1457,8 +1382,8 @@
         "Fractional"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/ERC20.sol": {
-      "lastModificationDate": 1685894593846,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/ERC20.sol": {
+      "lastModificationDate": 1687075529323,
       "contentHash": "ba2f426bb57b61643c4ff8fdd26a54de",
       "sourceName": "contracts/ERC20.sol",
       "solcConfig": {
@@ -1496,8 +1421,8 @@
         "ERC20"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
-      "lastModificationDate": 1685896747139,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/utils/math/SafeMath.sol": {
+      "lastModificationDate": 1688442190524,
       "contentHash": "2337f0279507b5edf14a07067adf0d05",
       "sourceName": "@openzeppelin/contracts/utils/math/SafeMath.sol",
       "solcConfig": {
@@ -1531,8 +1456,8 @@
         "SafeMath"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/IERC20.sol": {
-      "lastModificationDate": 1685894593854,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/IERC20.sol": {
+      "lastModificationDate": 1687075529325,
       "contentHash": "9a4e77fb8a7a3f30a5d0376079fa31d3",
       "sourceName": "contracts/IERC20.sol",
       "solcConfig": {
@@ -1566,8 +1491,8 @@
         "IERC20"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/AdministrativeRoles/Issuer.sol": {
-      "lastModificationDate": 1685894593842,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/AdministrativeRoles/Issuer.sol": {
+      "lastModificationDate": 1687075529321,
       "contentHash": "5af9a9b94e0fd48b5da43de7d5f1f673",
       "sourceName": "contracts/AdministrativeRoles/Issuer.sol",
       "solcConfig": {
@@ -1608,8 +1533,8 @@
         "Issuer"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Resource.sol": {
-      "lastModificationDate": 1685898199332,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Resource.sol": {
+      "lastModificationDate": 1687075529332,
       "contentHash": "d46730b5a4c11e77d6834fc6dd12dd52",
       "sourceName": "contracts/Resource.sol",
       "solcConfig": {
@@ -1644,8 +1569,8 @@
         "Resource"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/AdministrativeRoles/Verifier.sol": {
-      "lastModificationDate": 1685894593843,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/AdministrativeRoles/Verifier.sol": {
+      "lastModificationDate": 1687075529322,
       "contentHash": "ebad35c77b0433e64d7c36f3626935a1",
       "sourceName": "contracts/AdministrativeRoles/Verifier.sol",
       "solcConfig": {
@@ -1689,9 +1614,9 @@
         "Verifier"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/MediatorPattern.sol": {
-      "lastModificationDate": 1685899270030,
-      "contentHash": "b3341ef57ee0d933a36fac20e483b5e7",
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/MediatorPattern.sol": {
+      "lastModificationDate": 1688804049521,
+      "contentHash": "d4ce275546281544722dd23762274cff",
       "sourceName": "contracts/MediatorPattern/MediatorPattern.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -1721,7 +1646,8 @@
         "hardhat/console.sol",
         "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
         "../Resource.sol",
-        "./mEmployeeRole.sol",
+        "./EmployeeRole.sol",
+        "./AccessControlMediator.sol",
         "../AdministrativeRoles/Issuer.sol",
         "./NonAdminRoles/mReceiver.sol",
         "./NonAdminRoles/mManager.sol",
@@ -1737,128 +1663,12 @@
         "^0.8.7"
       ],
       "artifacts": [
-        "AccessControlMediator",
-        "Administrator",
-        "Employee",
-        "Manager888"
+        "Administrator"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/mEmployeeRole.sol": {
-      "lastModificationDate": 1685894593883,
-      "contentHash": "6a37969e71b532ddd1b9838778b79f34",
-      "sourceName": "contracts/MediatorPattern/mEmployeeRole.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol"
-      ],
-      "versionPragmas": [],
-      "artifacts": [
-        "EmployeeRole"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mReceiver.sol": {
-      "lastModificationDate": 1685894593875,
-      "contentHash": "d4fa11199838bc030b6e2187bfed4e04",
-      "sourceName": "contracts/MediatorPattern/NonAdminRoles/mReceiver.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../mEmployeeRole.sol",
-        "../../Resource.sol",
-        "hardhat/console.sol",
-        "./structure.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.7"
-      ],
-      "artifacts": [
-        "IReceiver",
-        "Receiver"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mManager.sol": {
-      "lastModificationDate": 1685894593870,
-      "contentHash": "3091b8ffc870dea3df7fa1d0e2ea6656",
-      "sourceName": "contracts/MediatorPattern/NonAdminRoles/mManager.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../mEmployeeRole.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.7"
-      ],
-      "artifacts": [
-        "Manager"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mPicker.sol": {
-      "lastModificationDate": 1685894593872,
-      "contentHash": "d9045680672e3aca3e9cff2702d38dc0",
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mPicker.sol": {
+      "lastModificationDate": 1688803989848,
+      "contentHash": "0e18a0cb201e9c2cc3fbe5500928be75",
       "sourceName": "contracts/MediatorPattern/NonAdminRoles/mPicker.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -1886,7 +1696,7 @@
       "imports": [
         "../../AdministrativeRoles/Issuer.sol",
         "../../AdministrativeRoles/Verifier.sol",
-        "../mEmployeeRole.sol"
+        "../EmployeeRole.sol"
       ],
       "versionPragmas": [
         "^0.8.7"
@@ -1896,9 +1706,9 @@
         "Picker"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mSupplier.sol": {
-      "lastModificationDate": 1685894593876,
-      "contentHash": "8a114b89123d447fa85249ef498f9bb0",
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mSupplier.sol": {
+      "lastModificationDate": 1688804017504,
+      "contentHash": "13a2ca46af5484db024ea715f3dc4956",
       "sourceName": "contracts/MediatorPattern/NonAdminRoles/mSupplier.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -1925,7 +1735,7 @@
       },
       "imports": [
         "../../Resource.sol",
-        "../mEmployeeRole.sol",
+        "../EmployeeRole.sol",
         "../MediatorPattern.sol",
         "../../AdministrativeRoles/Issuer.sol",
         "hardhat/console.sol"
@@ -1937,9 +1747,9 @@
         "Supplier"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mAuditor.sol": {
-      "lastModificationDate": 1685894593869,
-      "contentHash": "53161ffe790d03db55d7ab36e57da968",
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mAuditor.sol": {
+      "lastModificationDate": 1688803976746,
+      "contentHash": "d014dd2feae5e0088f8cf84685d5333a",
       "sourceName": "contracts/MediatorPattern/NonAdminRoles/mAuditor.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -1965,7 +1775,7 @@
         }
       },
       "imports": [
-        "../mEmployeeRole.sol"
+        "../EmployeeRole.sol"
       ],
       "versionPragmas": [
         "^0.8.7"
@@ -1975,9 +1785,9 @@
         "IAuditor"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mTransporter.sol": {
-      "lastModificationDate": 1685894593878,
-      "contentHash": "da1b196a915cc3a17e28d16d4ad85b74",
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mTransporter.sol": {
+      "lastModificationDate": 1688804019981,
+      "contentHash": "1bc226e58d07793efa0b836e5488b74e",
       "sourceName": "contracts/MediatorPattern/NonAdminRoles/mTransporter.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -2003,7 +1813,7 @@
         }
       },
       "imports": [
-        "../mEmployeeRole.sol"
+        "../EmployeeRole.sol"
       ],
       "versionPragmas": [
         "^0.8.7"
@@ -2013,9 +1823,9 @@
         "Transporter"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mPutaway.sol": {
-      "lastModificationDate": 1685894593873,
-      "contentHash": "1ffec1843fcfead0ef1114711988901b",
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mPutaway.sol": {
+      "lastModificationDate": 1688803993189,
+      "contentHash": "00d1a03bb1075e22a2d5a63bbee5417c",
       "sourceName": "contracts/MediatorPattern/NonAdminRoles/mPutaway.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -2042,7 +1852,7 @@
       },
       "imports": [
         "./mReceiver.sol",
-        "../mEmployeeRole.sol"
+        "../EmployeeRole.sol"
       ],
       "versionPragmas": [
         "^0.8.7"
@@ -2052,8 +1862,86 @@
         "Putaway"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/structure.sol": {
-      "lastModificationDate": 1685894593880,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mReceiver.sol": {
+      "lastModificationDate": 1688804010539,
+      "contentHash": "b8d56320a0f818366bc2bed9d83510ea",
+      "sourceName": "contracts/MediatorPattern/NonAdminRoles/mReceiver.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../EmployeeRole.sol",
+        "../../Resource.sol",
+        "hardhat/console.sol",
+        "./structure.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "IReceiver",
+        "Receiver"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/mManager.sol": {
+      "lastModificationDate": 1688803987469,
+      "contentHash": "c49ca65a0ef7ac481cfcf476471bdfbc",
+      "sourceName": "contracts/MediatorPattern/NonAdminRoles/mManager.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../EmployeeRole.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "Manager"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/NonAdminRoles/structure.sol": {
+      "lastModificationDate": 1687075529329,
       "contentHash": "17de007ffe7b09f77fa0ec2fa9d61823",
       "sourceName": "contracts/MediatorPattern/NonAdminRoles/structure.sol",
       "solcConfig": {
@@ -2087,8 +1975,8 @@
         "SharedStructs"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/TestContract.sol": {
-      "lastModificationDate": 1685894593919,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/TestContract.sol": {
+      "lastModificationDate": 1687075529371,
       "contentHash": "f9a69ce46e2ae3478b336c54ee7de59e",
       "sourceName": "contracts/TestContract.sol",
       "solcConfig": {
@@ -2130,8 +2018,83 @@
         "TestContract"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Component.sol": {
-      "lastModificationDate": 1685894593845,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1688442180523,
+      "contentHash": "e6ef731d275b1e7b2995f00fa56d9dab",
+      "sourceName": "@openzeppelin/contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAccessControl.sol",
+        "../utils/Context.sol",
+        "../utils/Strings.sol",
+        "../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@openzeppelin/contracts/access/IAccessControl.sol": {
+      "lastModificationDate": 1688442186814,
+      "contentHash": "57c84298234411cea19c7c284d86be8b",
+      "sourceName": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAccessControl"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Component.sol": {
+      "lastModificationDate": 1687075529322,
       "contentHash": "cc8c075b0430fcb1c3cc8941efa1140d",
       "sourceName": "contracts/Component.sol",
       "solcConfig": {
@@ -2171,45 +2134,8 @@
         "MainContract"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/NonAdministrativeRoles/Manager.sol": {
-      "lastModificationDate": 1685894593897,
-      "contentHash": "1f20fa4526648e3fea8fd6712d35c509",
-      "sourceName": "contracts/NonAdministrativeRoles/Manager.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../Component.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.7"
-      ],
-      "artifacts": [
-        "mManager"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/GenericLargeResponse.sol": {
-      "lastModificationDate": 1685894593853,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/GenericLargeResponse.sol": {
+      "lastModificationDate": 1687075529325,
       "contentHash": "f9c060b4e16534de17ab9435cd00b993",
       "sourceName": "contracts/GenericLargeResponse.sol",
       "solcConfig": {
@@ -2245,8 +2171,8 @@
         "APIConsumer"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/ERC725.sol": {
-      "lastModificationDate": 1685894593847,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/ERC725.sol": {
+      "lastModificationDate": 1687075529323,
       "contentHash": "542fddd556345020b218e933dd088af5",
       "sourceName": "contracts/ERC725.sol",
       "solcConfig": {
@@ -2280,8 +2206,8 @@
         "ERC725"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Main.sol": {
-      "lastModificationDate": 1685894593857,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Main.sol": {
+      "lastModificationDate": 1687075529326,
       "contentHash": "f99d1a8f6270b24885d24129b2fb6508",
       "sourceName": "contracts/Main.sol",
       "solcConfig": {
@@ -2311,8 +2237,8 @@
       "versionPragmas": [],
       "artifacts": []
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Migrations.sol": {
-      "lastModificationDate": 1685894593885,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/Migrations.sol": {
+      "lastModificationDate": 1687075529329,
       "contentHash": "63beaafb4f2e87c93db7a65892b63baa",
       "sourceName": "contracts/Migrations.sol",
       "solcConfig": {
@@ -2346,291 +2272,12 @@
         "Migrations"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/NonAdministrativeRoles/Auditor.sol": {
-      "lastModificationDate": 1685894593895,
-      "contentHash": "a87b191dc7b809209510676e459a38d3",
-      "sourceName": "contracts/NonAdministrativeRoles/Auditor.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/NonAdministrativeRoles/Picker.sol": {
-      "lastModificationDate": 1685894593898,
-      "contentHash": "5f4ed2a888720f08faa75592c8aa9fc4",
-      "sourceName": "contracts/NonAdministrativeRoles/Picker.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/NonAdministrativeRoles/Putaway.sol": {
-      "lastModificationDate": 1685894593900,
-      "contentHash": "35116f9f340ffda7b34c1670dbe2abeb",
-      "sourceName": "contracts/NonAdministrativeRoles/Putaway.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/NonAdministrativeRoles/Reciever.sol": {
-      "lastModificationDate": 1685894593901,
-      "contentHash": "9ccc186c06dd9c71dc07ceb71b8d80d6",
-      "sourceName": "contracts/NonAdministrativeRoles/Reciever.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/NonAdministrativeRoles/Supplier.sol": {
-      "lastModificationDate": 1685894593903,
-      "contentHash": "a3f6778ac54db9aada64f693ef12f18b",
-      "sourceName": "contracts/NonAdministrativeRoles/Supplier.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/RoleObjectPattern/Employee.sol": {
-      "lastModificationDate": 1685894593910,
-      "contentHash": "c8fcf8e6b96d28017d249405ed6caaef",
-      "sourceName": "contracts/RoleObjectPattern/Employee.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/RoleObjectPattern/Mediator.sol": {
-      "lastModificationDate": 1685894593912,
-      "contentHash": "989fb791274bd6f4268bd5a76d003223",
-      "sourceName": "contracts/RoleObjectPattern/Mediator.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/RoleObjectPattern/ROP.sol": {
-      "lastModificationDate": 1685894593914,
-      "contentHash": "9a19e2a66cfd49be53f9edd95e516661",
-      "sourceName": "contracts/RoleObjectPattern/ROP.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/RoleObjectPattern/RoleSubTYpe.sol": {
-      "lastModificationDate": 1685894593916,
-      "contentHash": "d41d8cd98f00b204e9800998ecf8427e",
-      "sourceName": "contracts/RoleObjectPattern/RoleSubTYpe.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/LinkToken.sol": {
-      "lastModificationDate": 1685894593855,
-      "contentHash": "8fea3228554102c16f2edfb1dc3c7b15",
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/LinkToken.sol": {
+      "lastModificationDate": 1688462331657,
+      "contentHash": "35337610495d778bbd94148ad1dae7ec",
       "sourceName": "contracts/LinkToken.sol",
       "solcConfig": {
-        "version": "0.4.24",
+        "version": "0.8.7",
         "settings": {
           "optimizer": {
             "enabled": true,
@@ -2652,16 +2299,12 @@
           }
         }
       },
-      "imports": [
-        "@chainlink/contracts/src/v0.4/LinkToken.sol"
-      ],
-      "versionPragmas": [
-        "^0.4.24"
-      ],
+      "imports": [],
+      "versionPragmas": [],
       "artifacts": []
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/LinkToken.sol": {
-      "lastModificationDate": 1685896760559,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/LinkToken.sol": {
+      "lastModificationDate": 1688442199016,
       "contentHash": "e9f0ef74e0010d065eca3b3031c440dd",
       "sourceName": "@chainlink/contracts/src/v0.4/LinkToken.sol",
       "solcConfig": {
@@ -2698,8 +2341,8 @@
         "LinkToken"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/ERC677Token.sol": {
-      "lastModificationDate": 1685896758685,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/ERC677Token.sol": {
+      "lastModificationDate": 1688442196557,
       "contentHash": "45b8db7fb2ef3b6c7dd95365ea22d0ff",
       "sourceName": "@chainlink/contracts/src/v0.4/ERC677Token.sol",
       "solcConfig": {
@@ -2736,8 +2379,8 @@
         "ERC677Token"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/vendor/StandardToken.sol": {
-      "lastModificationDate": 1685896763983,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/vendor/StandardToken.sol": {
+      "lastModificationDate": 1688442200633,
       "contentHash": "9e6703cae7b44c16c228e0025c159bdb",
       "sourceName": "@chainlink/contracts/src/v0.4/vendor/StandardToken.sol",
       "solcConfig": {
@@ -2774,8 +2417,43 @@
         "StandardToken"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC677.sol": {
-      "lastModificationDate": 1685896758669,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC677Receiver.sol": {
+      "lastModificationDate": 1688442196546,
+      "contentHash": "59f6b5d24479f462b1376ba5a96edf2a",
+      "sourceName": "@chainlink/contracts/src/v0.4/interfaces/ERC677Receiver.sol",
+      "solcConfig": {
+        "version": "0.4.24",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.4.8"
+      ],
+      "artifacts": [
+        "ERC677Receiver"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC677.sol": {
+      "lastModificationDate": 1688442196533,
       "contentHash": "05de760f44a7c34c788f89571bbb77ee",
       "sourceName": "@chainlink/contracts/src/v0.4/interfaces/ERC677.sol",
       "solcConfig": {
@@ -2811,43 +2489,8 @@
         "ERC677"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC677Receiver.sol": {
-      "lastModificationDate": 1685896758675,
-      "contentHash": "59f6b5d24479f462b1376ba5a96edf2a",
-      "sourceName": "@chainlink/contracts/src/v0.4/interfaces/ERC677Receiver.sol",
-      "solcConfig": {
-        "version": "0.4.24",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.4.8"
-      ],
-      "artifacts": [
-        "ERC677Receiver"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC20.sol": {
-      "lastModificationDate": 1685896758619,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC20.sol": {
+      "lastModificationDate": 1688442196505,
       "contentHash": "06a6781f289c4039aa25b91d52799fc2",
       "sourceName": "@chainlink/contracts/src/v0.4/interfaces/ERC20.sol",
       "solcConfig": {
@@ -2883,8 +2526,8 @@
         "ERC20"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC20Basic.sol": {
-      "lastModificationDate": 1685896758638,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/interfaces/ERC20Basic.sol": {
+      "lastModificationDate": 1688442196530,
       "contentHash": "c669adeb22611a05d90e6444dcb431e6",
       "sourceName": "@chainlink/contracts/src/v0.4/interfaces/ERC20Basic.sol",
       "solcConfig": {
@@ -2918,8 +2561,8 @@
         "ERC20Basic"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/vendor/BasicToken.sol": {
-      "lastModificationDate": 1685896755350,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/vendor/BasicToken.sol": {
+      "lastModificationDate": 1688442194761,
       "contentHash": "00797d6f33d74331d3436d8dc0cf0c65",
       "sourceName": "@chainlink/contracts/src/v0.4/vendor/BasicToken.sol",
       "solcConfig": {
@@ -2956,8 +2599,8 @@
         "BasicToken"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/vendor/SafeMathChainlink.sol": {
-      "lastModificationDate": 1685896763818,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.4/vendor/SafeMathChainlink.sol": {
+      "lastModificationDate": 1688442200504,
       "contentHash": "25526c623f7624993554d443f0f25549",
       "sourceName": "@chainlink/contracts/src/v0.4/vendor/SafeMathChainlink.sol",
       "solcConfig": {
@@ -2991,8 +2634,8 @@
         "SafeMathChainlink"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MockOracle.sol": {
-      "lastModificationDate": 1685894593887,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MockOracle.sol": {
+      "lastModificationDate": 1687075529330,
       "contentHash": "d91d78de540d6af9f45818f02b714d6b",
       "sourceName": "contracts/MockOracle.sol",
       "solcConfig": {
@@ -3031,8 +2674,8 @@
         "MockOracle"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/LinkTokenReceiver.sol": {
-      "lastModificationDate": 1685896760748,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/LinkTokenReceiver.sol": {
+      "lastModificationDate": 1688442199078,
       "contentHash": "b16f6ced4c696bf10c861f18c3151fb5",
       "sourceName": "@chainlink/contracts/src/v0.6/LinkTokenReceiver.sol",
       "solcConfig": {
@@ -3066,43 +2709,8 @@
         "LinkTokenReceiver"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol": {
-      "lastModificationDate": 1685896756849,
-      "contentHash": "60c362a87469b7c5bdc116bf5f5ffa8a",
-      "sourceName": "@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.6.0"
-      ],
-      "artifacts": [
-        "ChainlinkRequestInterface"
-      ]
-    },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/interfaces/LinkTokenInterface.sol": {
-      "lastModificationDate": 1685896760609,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/interfaces/LinkTokenInterface.sol": {
+      "lastModificationDate": 1688442199049,
       "contentHash": "bb291d0e43a81edd96f781b2760d9553",
       "sourceName": "@chainlink/contracts/src/v0.6/interfaces/LinkTokenInterface.sol",
       "solcConfig": {
@@ -3136,8 +2744,43 @@
         "LinkTokenInterface"
       ]
     },
-    "/media/zoint/Harici/AllFiles/Projeler/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol": {
-      "lastModificationDate": 1685896763830,
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol": {
+      "lastModificationDate": 1688442195521,
+      "contentHash": "60c362a87469b7c5bdc116bf5f5ffa8a",
+      "sourceName": "@chainlink/contracts/src/v0.6/interfaces/ChainlinkRequestInterface.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.6.0"
+      ],
+      "artifacts": [
+        "ChainlinkRequestInterface"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/node_modules/@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol": {
+      "lastModificationDate": 1688442200509,
       "contentHash": "5caf46296cfce2e0b96cb3028b626ee5",
       "sourceName": "@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol",
       "solcConfig": {
@@ -3169,6 +2812,87 @@
       ],
       "artifacts": [
         "SafeMathChainlink"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/EmployeeRole.sol": {
+      "lastModificationDate": 1688803961215,
+      "contentHash": "6a37969e71b532ddd1b9838778b79f34",
+      "sourceName": "contracts/MediatorPattern/EmployeeRole.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol"
+      ],
+      "versionPragmas": [],
+      "artifacts": [
+        "EmployeeRole"
+      ]
+    },
+    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things/contracts/MediatorPattern/AccessControlMediator.sol": {
+      "lastModificationDate": 1688804288842,
+      "contentHash": "cb76018c6d73e096081ea75e2cbe1d9c",
+      "sourceName": "contracts/MediatorPattern/AccessControlMediator.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1000
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./EmployeeRole.sol",
+        "./NonAdminRoles/mReceiver.sol",
+        "./NonAdminRoles/mSupplier.sol",
+        "./NonAdminRoles/mPutaway.sol",
+        "./NonAdminRoles/mPicker.sol",
+        "./NonAdminRoles/mTransporter.sol",
+        "./NonAdminRoles/mAuditor.sol",
+        "./NonAdminRoles/mManager.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.7"
+      ],
+      "artifacts": [
+        "AccessControlMediator",
+        "Employee",
+        "Manager888"
       ]
     }
   }

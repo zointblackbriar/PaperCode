@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.7;
 import "../../Resource.sol";
-import "../mEmployeeRole.sol";
+import "../EmployeeRole.sol";
 import "../MediatorPattern.sol";
 import "../../AdministrativeRoles/Issuer.sol";
 

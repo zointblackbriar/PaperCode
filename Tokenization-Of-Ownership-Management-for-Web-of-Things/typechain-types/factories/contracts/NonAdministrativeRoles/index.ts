@@ -2,3 +2,4 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as managerSol from "./Manager.sol";
+export { Receiver__factory } from "./Receiver__factory";

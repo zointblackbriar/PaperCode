@@ -3,3 +3,4 @@
 /* eslint-disable */
 import type * as managerSol from "./Manager.sol";
 export type { managerSol };
+export type { Receiver } from "./Receiver";
