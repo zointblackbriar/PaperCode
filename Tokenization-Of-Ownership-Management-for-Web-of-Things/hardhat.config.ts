@@ -2,13 +2,25 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import '@typechain/hardhat'
 import '@nomiclabs/hardhat-ethers'
-import '@nomiclabs/hardhat-waffle'
-require("@nomiclabs/hardhat-waffle");
+// import '@nomiclabs/hardhat-waffle'
+// require("@nomiclabs/hardhat-waffle");
 
 require('dotenv').config();
 
 
 const API_KEY: string = process.env.REACT_APP_API_KEY || '';; // okay
+
+// task action function receives the Hardhat Runtime Environment as second argument
+// this is a test for hardhat-ethers
+// task(
+//   "blockNumber",
+//   "Prints the current block number",
+//   async (_, { ethers }) => {
+//     await ethers.provider.getBlockNumber().then((blockNumber) => {
+//       console.log("Current block number: " + blockNumber);
+//     });
+//   }
+// );
 
 
 const config: HardhatUserConfig = {
@@ -26,15 +38,15 @@ const config: HardhatUserConfig = {
           },
         },
       },
-      {
-        version: "0.4.24",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 1000,
-          },
-        },
-      },
+      // {
+      //   version: "0.4.24",
+      //   settings: {
+      //     optimizer: {
+      //       enabled: true,
+      //       runs: 1000,
+      //     },
+      //   },
+      // },
       {
         version: "0.6.6",
         settings: {

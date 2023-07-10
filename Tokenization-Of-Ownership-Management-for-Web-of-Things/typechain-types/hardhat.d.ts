@@ -61,6 +61,14 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ChainlinkClient__factory>;
     getContractFactory(
+      name: "ConfirmedOwner",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ConfirmedOwner__factory>;
+    getContractFactory(
+      name: "ConfirmedOwnerWithProposal",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ConfirmedOwnerWithProposal__factory>;
+    getContractFactory(
       name: "ChainlinkRequestInterface",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ChainlinkRequestInterface__factory>;
@@ -81,6 +89,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.OracleInterface__factory>;
     getContractFactory(
+      name: "OwnableInterface",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.OwnableInterface__factory>;
+    getContractFactory(
       name: "PointerInterface",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PointerInterface__factory>;
@@ -100,6 +112,10 @@ declare module "hardhat/types/runtime" {
       name: "Ownable",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Ownable__factory>;
+    getContractFactory(
+      name: "IERC4906",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC4906__factory>;
     getContractFactory(
       name: "Pausable",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -209,14 +225,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Fractional__factory>;
     getContractFactory(
-      name: "FractionalNFT",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.FractionalNFT__factory>;
-    getContractFactory(
-      name: "APIConsumer",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.APIConsumer__factory>;
-    getContractFactory(
       name: "IERC20",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC20__factory>;
@@ -237,25 +245,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.EmployeeRole__factory>;
     getContractFactory(
-      name: "AccessControlMediator",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.AccessControlMediator__factory>;
-    getContractFactory(
       name: "Administrator",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Administrator__factory>;
-    getContractFactory(
-      name: "Employee",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Employee__factory>;
-    getContractFactory(
-      name: "Manager888",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Manager888__factory>;
-    getContractFactory(
-      name: "EmployeeRole",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.EmployeeRole__factory>;
     getContractFactory(
       name: "Auditor",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -305,10 +297,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Transporter__factory>;
     getContractFactory(
-      name: "Migrations",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Migrations__factory>;
-    getContractFactory(
       name: "MockOracle",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MockOracle__factory>;
@@ -317,14 +305,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MockOracleClient__factory>;
     getContractFactory(
-      name: "MManager",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.MManager__factory>;
-    getContractFactory(
-      name: "Receiver",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Receiver__factory>;
-    getContractFactory(
       name: "Resource",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Resource__factory>;
@@ -332,6 +312,10 @@ declare module "hardhat/types/runtime" {
       name: "TestContract",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.TestContract__factory>;
+    getContractFactory(
+      name: "WebofThingsDevice",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.WebofThingsDevice__factory>;
 
     getContractAt(
       name: "ERC677Token",
@@ -394,6 +378,16 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.ChainlinkClient>;
     getContractAt(
+      name: "ConfirmedOwner",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ConfirmedOwner>;
+    getContractAt(
+      name: "ConfirmedOwnerWithProposal",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ConfirmedOwnerWithProposal>;
+    getContractAt(
       name: "ChainlinkRequestInterface",
       address: string,
       signer?: ethers.Signer
@@ -419,6 +413,11 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.OracleInterface>;
     getContractAt(
+      name: "OwnableInterface",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.OwnableInterface>;
+    getContractAt(
       name: "PointerInterface",
       address: string,
       signer?: ethers.Signer
@@ -443,6 +442,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.Ownable>;
+    getContractAt(
+      name: "IERC4906",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC4906>;
     getContractAt(
       name: "Pausable",
       address: string,
@@ -579,16 +583,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.Fractional>;
     getContractAt(
-      name: "FractionalNFT",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.FractionalNFT>;
-    getContractAt(
-      name: "APIConsumer",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.APIConsumer>;
-    getContractAt(
       name: "IERC20",
       address: string,
       signer?: ethers.Signer
@@ -614,30 +608,10 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.EmployeeRole>;
     getContractAt(
-      name: "AccessControlMediator",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.AccessControlMediator>;
-    getContractAt(
       name: "Administrator",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.Administrator>;
-    getContractAt(
-      name: "Employee",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Employee>;
-    getContractAt(
-      name: "Manager888",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Manager888>;
-    getContractAt(
-      name: "EmployeeRole",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.EmployeeRole>;
     getContractAt(
       name: "Auditor",
       address: string,
@@ -699,11 +673,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.Transporter>;
     getContractAt(
-      name: "Migrations",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Migrations>;
-    getContractAt(
       name: "MockOracle",
       address: string,
       signer?: ethers.Signer
@@ -714,16 +683,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.MockOracleClient>;
     getContractAt(
-      name: "MManager",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.MManager>;
-    getContractAt(
-      name: "Receiver",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Receiver>;
-    getContractAt(
       name: "Resource",
       address: string,
       signer?: ethers.Signer
@@ -733,6 +692,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.TestContract>;
+    getContractAt(
+      name: "WebofThingsDevice",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.WebofThingsDevice>;
 
     // default types
     getContractFactory(

@@ -11,35 +11,30 @@ contract APIConsumer is ChainlinkClient {
     using Chainlink for Chainlink.Request;
 
     uint256 public volume;
-    address private immutable oracle;
-    bytes32 private immutable jobId;
-    uint256 private immutable fee;
+    address private immutable oracle = address(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+    bytes32 private jobId;
+    uint256 private fee;
 
     event DataFullfilled(uint256 volume);
 
-    /**
-     * @notice Executes once when a contract is created to initialize state variables
-     *
-     * @param _oracle - address of the specific Chainlink node that a contract makes an API call from
-     * @param _jobId - specific job for :_oracle: to run; each job is unique and returns different types of data
-     * @param _fee - node operator price per API call / data request
-     * @param _link - LINK token address on the corresponding network
-     *
-     * Network: Sepolia
-     * Oracle: 0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD
-     * Job ID: ca98366cc7314957b8c012c72f05aeeb
-     * Fee: 0.1 LINK
-     */
-    constructor(address _oracle, bytes32 _jobId, uint256 _fee, address _link) {
-        if (_link == address(0)) {
-            setPublicChainlinkToken();
-        } else {
-            setChainlinkToken(_link);
-        }
-        oracle = _oracle;
-        jobId = _jobId;
-        fee = _fee;
+    // constructor(address _oracle, bytes32 _jobId, uint256 _fee, address _link) {
+    //     if (_link == address(0)) {
+    //         setPublicChainlinkToken();
+    //     } else {
+    //         setChainlinkToken(_link);
+    //     }
+    //     oracle = _oracle;
+    //     jobId = _jobId;
+    //     fee = _fee;
+    // }
+
+    constructor() {
+        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+        setChainlinkOracle(0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD);
+        jobId = "7da2702f37fd48e5b1b9a5715e3509b6";
+        fee = (1 * LINK_DIVISIBILITY);
     }
+
 
     /**
      * @notice Creates a Chainlink request to retrieve API response, find the target

@@ -84,7 +84,7 @@ const _abi = [
     stateMutability: "nonpayable",
     type: "function",
   },
-];
+] as const;
 
 export class IComponent__factory {
   static readonly abi = _abi;

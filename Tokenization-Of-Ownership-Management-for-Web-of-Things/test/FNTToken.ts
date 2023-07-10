@@ -41,18 +41,9 @@ describe("FNFToken", function () {
         //await contract1.connect(owner).getBalanceOfToken(owner.address);
 
         const ownerBalance = await contract1.balanceOf(owner.address);
-        console.log("FNT Address BAlance ",ownerBalance );
-
-
-
-        //expect(await contract1.totalSupply()).to.equal(ownerBalance);
-
-
-      //  console.log("FNT Address BAlance ",balance1, a );
-
-     //   await contract1.connect(owner).receive();
-
-
+        console.log("FNT Address Balance ",ownerBalance );
+        expect(await contract1.totalSupply()).to.equal(ownerBalance);
+        // await contract1.connect(owner).receive();
 
       }); 
     });

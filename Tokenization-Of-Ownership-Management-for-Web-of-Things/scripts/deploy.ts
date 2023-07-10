@@ -64,6 +64,11 @@ async function main() {
  console.log("AccessControlMediator contract deployed to:", mediator.address);
 
 
+  const webOfThingsContract = await ethers.getContractFactory("WebofThingsDevice");
+  const WoT = await webOfThingsContract.deploy(owner.address, "samplewot1", "wotdescription", "specwot");
+  await WoT.deployed()
+  console.log("WebofThingsDevice contract deployed to:", WoT.address);
+
 
 
   // const GenericLargeResponse = await ethers.getContractFactory("GenericLargeResponse");

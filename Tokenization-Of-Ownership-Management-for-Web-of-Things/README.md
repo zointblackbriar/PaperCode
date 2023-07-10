@@ -131,8 +131,14 @@ npm i @node-wot/binding-http
 Run the server application with the following command
 
 ```bash
-npx ts-node test/Web0
+npx ts-node test/WebOfThingsServer.ts
 ```
+
+### Some Tests
+
+You can test hardhat-ethers that brings the Ethereum library (ethers.js) to Hardhat software development suite with the Ethereum blockchain in a simple way.
+
+# Interaction with Smart Contracts
 
 Interaction with the hardhat development suite
 
@@ -151,9 +157,4 @@ Connect to the hardhat console at localhost:
 ```bash
 npx hardhat console --network localhost
 ```
-
-Interact with your contract: 
-
-
-
 

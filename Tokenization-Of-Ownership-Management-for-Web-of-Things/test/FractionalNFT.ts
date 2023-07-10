@@ -3,6 +3,9 @@ import { anyValue } from "@nomicfoundation/hardhat-chai-matchers/withArgs";
 import { expect } from "chai";
 import { FractionalNFT } from '../typechain-types/contracts/FractionalNFT';
 import { FNFToken } from '../typechain-types/contracts/FNFToken';
+const { Servient } = require("@node-wot/core");
+const { HttpClientFactory } = require("@node-wot/binding-http");
+const {wotHelper} = require("..")
 
 const { ethers } = require("hardhat");
 
@@ -20,6 +23,10 @@ describe("FractionalNFT", function () {
 
     const FNFToken = await hardhat.ethers.getContractFactory("FNFToken");
     contract2 = await FNFToken.deploy();
+
+    //node-wot core installation
+    // servient = new Servient();
+    // servient
   });
 
 
@@ -27,6 +34,7 @@ describe("FractionalNFT", function () {
     it("should return correct name and symbol of contract", async function () {
       await contract1.deployed();
       // expect( await contract.deployed.name).to.equal(true);
+      WebOfThingsServer();
     });
   });
 
@@ -87,13 +95,14 @@ describe("FractionalNFT", function () {
 
       await expect(contract1.mint(owner.address, 'QmRZRoFryzYUN9JY5YKYx75uyjfptGqWWmasFFRwz1eQJM/0', 4)).to.emit(contract1, 'MintNFT').withArgs(owner.address, 4);
       await contract1.connect(owner).mint(owner.address, 'QmRZRoFryzYUN9JY5YKYx75uyjfptGqWWmasFFRwz1eQJM/0', 4);
-      await contract1.connect(owner).transferFNFToken(owner.address, 0, 1);
+      // await contract1.connect(owner).transferFNFToken(owner.address, 0, 1);
 
       // const balance = await contract1.connect(owner).balanceOf(owner.address);
       // console.log("Balanace Owner Account: ", balance);
 
       // we need to put here some test cases for WoT devices
     });
+
   });
 
 });

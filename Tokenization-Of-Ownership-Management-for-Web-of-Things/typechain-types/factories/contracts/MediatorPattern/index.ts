@@ -4,5 +4,4 @@
 export * as accessControlMediatorSol from "./AccessControlMediator.sol";
 export * as mediatorPatternSol from "./MediatorPattern.sol";
 export * as nonAdminRoles from "./NonAdminRoles";
-export * as mEmployeeRoleSol from "./mEmployeeRole.sol";
 export { EmployeeRole__factory } from "./EmployeeRole__factory";

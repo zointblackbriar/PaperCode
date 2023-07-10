@@ -48,3 +48,5 @@ wotHelper
     }).catch((err) => {
         console.error("Fetch error: ", err)
     });
+
+exports.wotHelper = wotHelper;

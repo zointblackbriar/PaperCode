@@ -1,52 +1,52 @@
-// SPDX-License-Identifier: MIT
+// // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.6;
+// pragma solidity ^0.8.6;
 
-import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
+// import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
 
-    contract APIConsumer is ChainlinkClient {
-    using Chainlink for Chainlink.Request; // This is the new line
-
-
-    uint256 public volume;
-
-    address private oracle;
-    bytes32 private jobId;
-    uint256 private fee;
-    address public _link = 0xa36085F69e2889c224210F603D836748e7dC0088;
-
-    constructor() {
-        if (_link == address(0)) {
-            setPublicChainlinkToken();
-        } else {
-            setChainlinkToken(_link);
-        }
-        oracle = 0x56dd6586DB0D08c6Ce7B2f2805af28616E082455;
-        jobId = "b6602d14e4734c49a5e1ce19d45a4632";
-        fee = 0.1 * 10 ** 18; // 0.1 LINK
-    }
+//     contract APIConsumer is ChainlinkClient {
+//     using Chainlink for Chainlink.Request; // This is the new line
 
 
-    function requestVolumeData() public returns (bytes32 requestId) 
-    {
-        Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
+//     uint256 public volume;
+
+//     address private oracle;
+//     bytes32 private jobId;
+//     uint256 private fee;
+//     address public _link = 0xa36085F69e2889c224210F603D836748e7dC0088;
+
+//     constructor() {
+//         if (_link == address(0)) {
+//             setPublicChainlinkToken();
+//         } else {
+//             setChainlinkToken(_link);
+//         }
+//         oracle = 0x56dd6586DB0D08c6Ce7B2f2805af28616E082455;
+//         jobId = "b6602d14e4734c49a5e1ce19d45a4632";
+//         fee = 0.1 * 10 ** 18; // 0.1 LINK
+//     }
+
+
+//     function requestVolumeData() public returns (bytes32 requestId) 
+//     {
+//         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
     
-        // Set the URL to perform the GET request on
-        request.add("get", "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD");
+//         // Set the URL to perform the GET request on
+//         request.add("get", "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD");
     
    
-        request.add("path", "RAW.ETH.USD.VOLUME24HOUR");
+//         request.add("path", "RAW.ETH.USD.VOLUME24HOUR");
     
-        int timesAmount = 10**18;
-        request.addInt("times", timesAmount);
+//         int timesAmount = 10**18;
+//         request.addInt("times", timesAmount);
     
-        // Sends the request
-        return sendChainlinkRequestTo(oracle, request, fee);
-    }   
+//         // Sends the request
+//         return sendChainlinkRequestTo(oracle, request, fee);
+//     }   
 
 
-    function fulfill(bytes32 _requestId, uint256 _volume) public recordChainlinkFulfillment(_requestId)
-    {
-        volume = _volume;
-    }
-}
+//     function fulfill(bytes32 _requestId, uint256 _volume) public recordChainlinkFulfillment(_requestId)
+//     {
+//         volume = _volume;
+//     }
+// }

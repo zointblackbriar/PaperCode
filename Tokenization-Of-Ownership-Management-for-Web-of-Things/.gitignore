@@ -280,3 +280,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# typechain types
+**/typechain-types/factories
+**/src/artifacts/
