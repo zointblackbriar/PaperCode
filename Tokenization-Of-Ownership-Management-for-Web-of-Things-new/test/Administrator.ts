@@ -425,13 +425,6 @@ describe("Administrator", function () {
 
             const contract = new ethers.Contract(employee_role, abi, employeeRoleSigner);
             const transation = await contract.updateReciept(1,1,2,_issuer,_verifier,employee_role);
-           // const trans_result = await transation.wait();
-
-           // const transation1 = await contract.getresult();
-            //  const trans_result1 = await transation1.wait();
-            // console.log(transation1);
-
-            //expect(await contract.getresult()).to.equal(true);
 
         });
     });

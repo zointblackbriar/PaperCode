@@ -14,18 +14,18 @@ import { Receiver } from '../typechain-types/contracts/MediatorPattern/NonAdminR
 describe("WebOfThings Deployment", function() {
     let contract_webofthings: WebofThingsDevice;
 
-    async function deployFixtureWebOfthings() {
-        const ONE_GWEI = 1_000_000_000;
+    // async function deployFixtureWebOfthings() {
+    //     const ONE_GWEI = 1_000_000_000;
 
-        const lockedAmount = ONE_GWEI;
-        const [owner, addr1, addr2] = await ethers.getSigners();
+    //     const lockedAmount = ONE_GWEI;
+    //     const [owner, addr1, addr2] = await ethers.getSigners();
 
-        const WebOfthings = await ethers.getContractFactory("WebofThingsDevice"); 
-        const webofthings = await WebOfthings.deploy({ value: lockedAmount });
+    //     const WebOfthings = await ethers.getContractFactory("WebofThingsDevice"); 
+    //     const webofthings = await WebOfthings.deploy({ value: lockedAmount });
 
-        return {webofthings, owner, addr1, addr2};
+    //     return {webofthings, owner, addr1, addr2};
     
-    }
+    // }
 
     let contract_admin: Administrator;
     let contract_issuer: Issuer;
@@ -33,6 +33,7 @@ describe("WebOfThings Deployment", function() {
     let contract_resource: Resource;
     let contract_supplier: Supplier;
     let contract_receiver: Receiver;
+    let contract_webofthings: WebofThingsDevice;
 
 
     beforeEach(async() => {
@@ -59,11 +60,14 @@ describe("WebOfThings Deployment", function() {
         const Receiver = await ethers.getContractFactory("Receiver");
         contract_receiver = await Receiver.deploy();
 
+        const WebOfthings = await ethers.getContractFactory("WebofThingsDevice");
+        contract_webofthings = await WebOfthings.deploy();
+
 
     });
 
     it("Should respond with a behavior such as web of things functions", async function() {
-        const { webofthings, owner } = await loadFixture(deployFixtureWebOfthings);
+        // const { webofthings, owner } = await loadFixture(deployFixtureWebOfthings);
         console.log("sample message: " + webofthings.getSampleMessage());
         expect(await webofthings.getSampleMessage()).to.equal("Wot Device");
         expect(owner.address).not.to.null;
@@ -116,6 +120,7 @@ describe("WebOfThings Deployment", function() {
             await contract_admin.deployed();
             await contract_receiver.deployed();
             await contract_verifier.deployed();
+            await contract_webofthings.deployed();
 
             // console.log("Deployed Issuer", contract_issuer.address);
             //await contract2.deployed();

@@ -13,7 +13,7 @@
     "outDir": "dist"
   },
  // "include": ["./src/**/*"],
-  "include": ["./scripts", "./test", "./typechain-types"],
+  "include": ["./scripts", "./test", "./typechain-types", "deprecated-test/FractionalNFT.ts", "deprecated-test/Fractional.ts", "deprecated-test/FNTToken.ts", "deprecated-test/ComponentCore.ts", "deprecated-test/MediatorPattern.ts", "deprecated-test/Issuer.ts"],
 
   "files": ["./hardhat.config.ts"]
 

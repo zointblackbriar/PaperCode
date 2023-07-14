@@ -5317,37 +5317,6 @@
         "ERC725"
       ]
     },
-    "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things-new/contracts/Main.sol": {
-      "lastModificationDate": 1689151296306,
-      "contentHash": "f99d1a8f6270b24885d24129b2fb6508",
-      "sourceName": "contracts/Main.sol",
-      "solcConfig": {
-        "version": "0.8.7",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1000
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [],
-      "artifacts": []
-    },
     "/Users/zoint/Desktop/Projects/zointblackbriar/PaperCode/Tokenization-Of-Ownership-Management-for-Web-of-Things-new/contracts/NonAdministrativeRoles/Auditor.sol": {
       "lastModificationDate": 1689151296387,
       "contentHash": "a87b191dc7b809209510676e459a38d3",
