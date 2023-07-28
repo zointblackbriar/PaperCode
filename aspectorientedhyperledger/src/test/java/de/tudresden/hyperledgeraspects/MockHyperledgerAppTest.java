@@ -12,6 +12,8 @@ import de.tudresden.hyperledgeraspects.model.MyAssetContract;
 
 import org.hyperledger.fabric.contract.Context;
 
+import org.json.JSONObject;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
@@ -32,6 +34,65 @@ import java.nio.charset.StandardCharsets;
 public class MockHyperledgerAppTest {
 
     //~ Inner Classes ------------------------------------------------------------------------------------------------------------
+
+    /**
+     * TODO DOCUMENT ME!
+     *
+     * @author $author$
+     */
+
+    @Nested
+    class AssetCreates {
+
+        //~ Methods --------------------------------------------------------------------------------------------------------------
+
+        /**
+         * TODO DOCUMENT ME!
+         *
+         * @throws IOException
+         */
+        @Test
+        public void newAssetCreate() throws IOException {
+            MyAssetContract myAssetContract = new MyAssetContract();
+            Context ctx = mock(Context.class);
+            org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
+            when(ctx.getStub()).thenReturn(stub);
+
+            // String json = "{'value': 'TheAsset'}";
+            JSONObject json = new JSONObject();
+            json.put("value", "TheAsset");
+            myAssetContract.createAsset(ctx, "10001", "TheAsset");
+            verify(stub).putState("10001", json.toString().getBytes(StandardCharsets.UTF_8));
+        }
+    }
+
+    /**
+     * TODO DOCUMENT ME!
+     *
+     * @author $author$
+     */
+    @Nested
+    class AssetDeletion {
+
+        //~ Methods --------------------------------------------------------------------------------------------------------------
+
+        /**
+         * TODO DOCUMENT ME!
+         */
+        @Test
+        public void assetDelete() {
+            MyAssetContract myAssetContract = new MyAssetContract();
+            Context ctx = mock(Context.class);
+            org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
+            when(ctx.getStub()).thenReturn(stub);
+            when(stub.getState("10001")).thenReturn(null);
+
+            Exception thrown = Assertions.assertThrows(RuntimeException.class,
+                    () -> {myAssetContract.deleteMyAsset(ctx, "10001");});
+
+            Assertions.assertEquals(thrown.getMessage(), "The asset could not be deleted");
+        }
+    }
 
     /**
      * TODO DOCUMENT ME!
@@ -110,7 +171,7 @@ public class MockHyperledgerAppTest {
          *
          * @throws IOException
          */
-        @Disabled
+        @Test
         public void updateAsset() throws IOException {
             MyAssetContract contract = new MyAssetContract();
             Context ctx = mock(Context.class);
@@ -120,8 +181,28 @@ public class MockHyperledgerAppTest {
 
             contract.updateMyAsset(ctx, "10001", "updates");
 
-            String json = "{\"value\": \"updates\"}";
-            verify(stub).putState("10001", json.getBytes(StandardCharsets.UTF_8));
+            // String json = "{\"value\": \"updates\"}";
+            JSONObject json = new JSONObject();
+            json.put("value", "updates");
+            verify(stub).putState("10001", json.toString().getBytes(StandardCharsets.UTF_8));
+        }
+
+        /**
+         * TODO DOCUMENT ME!
+         */
+        @Test
+        public void updateMissingAsset() {
+            MyAssetContract myAssetContract = new MyAssetContract();
+            Context ctx = mock(Context.class);
+            org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
+            when(ctx.getStub()).thenReturn(stub);
+
+            when(stub.getState("10001")).thenReturn(null);
+
+            Exception thrown = Assertions.assertThrows(RuntimeException.class,
+                    () -> {myAssetContract.updateMyAsset(ctx, "10001", "TheAsset");});
+
+            Assertions.assertEquals(thrown.getMessage(), "The asset does not exist");
         }
     }
 }

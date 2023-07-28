@@ -156,7 +156,7 @@ public class MyAssetContract {
         boolean exists = myAssetExists(ctx, myAssetId);
 
         if (!exists) {
-            throw new RuntimeException("the asset is not existed");
+            throw new RuntimeException("The asset does not exist");
         }
 
         MyAsset asset = new MyAsset();
