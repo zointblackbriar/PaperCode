@@ -8,44 +8,52 @@
  */
 package de.tudresden.hyperledgeraspects.decoratorlayer;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+
 /**
  * TODO DOCUMENT ME!
  *
  * @author $author$
  */
-public class PackageSourceDecorator implements PackageSource {
+@AllArgsConstructor
+@Getter
+@Setter
+public class Order {
 
     //~ Instance fields ----------------------------------------------------------------------------------------------------------
 
     /**
      * TODO DOCUMENT ME!
      */
-    private PackageSource wrappee;
-
-    //~ Constructors -------------------------------------------------------------------------------------------------------------
-
-    // Dependency of Injection
-    // @Autowired annotation tag can be used.
-    /**
-     * Creates a new {@link PackageSourceDecorator} object.
-     *
-     * @param packageSource TODO DOCUMENT ME!
-     */
-    public PackageSourceDecorator(PackageSource packageSource) {
-        this.wrappee = packageSource;
-    }
-
-    //~ Methods ------------------------------------------------------------------------------------------------------------------
+    private String orderID;
 
     /**
      * TODO DOCUMENT ME!
-     *
-     * @param data TODO DOCUMENT ME!
      */
-    @Override
-    public void getPackage(String data) {
-        // TODO Auto-generated method stub
-        wrappee.getPackage(data);
+    private List<Product> productList;
+
+    /**
+     * TODO DOCUMENT ME!
+     */
+    private String status;
+
+    //~ Methods ------------------------------------------------------------------------------------------------------------------
+
+    // Method to add a product to the order
+    /**
+     * TODO DOCUMENT ME!
+     *
+     * @param listOfProducts product TODO DOCUMENT ME!
+     */
+    public void addProductToOrder(List<Product> listOfProducts) {
+        for (Product sampleProduct : listOfProducts) {
+            productList.add(sampleProduct);
+        }
     }
 
     /**
@@ -53,9 +61,13 @@ public class PackageSourceDecorator implements PackageSource {
      *
      * @return TODO DOCUMENT ME!
      */
-    @Override
-    public String readDataFromPackage() {
-        // TODO Auto-generated method stub
-        return wrappee.readDataFromPackage();
+    public double calculateTotalOrderAmount() {
+        double totalAmount = 0;
+
+        for (Product product : productList) {
+            totalAmount += product.getPrice() * product.getQuantity();
+        }
+
+        return totalAmount;
     }
 }

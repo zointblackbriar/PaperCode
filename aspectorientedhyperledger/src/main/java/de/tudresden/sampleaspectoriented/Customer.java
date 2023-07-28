@@ -6,28 +6,40 @@
  * You may not use, copy, modify, sublicense, or distribute the Program or any
  * portion of it, except as expressly provided under the given license.
  */
-package de.tudresden.hyperledgeraspects.decoratorlayer;
+package de.tudresden.sampleaspectoriented;
 
 /**
  * TODO DOCUMENT ME!
  *
  * @author $author$
  */
-public interface PackageSource {
+public interface Customer {
 
     //~ Methods ------------------------------------------------------------------------------------------------------------------
 
     /**
      * TODO DOCUMENT ME!
-     *
-     * @param data TODO DOCUMENT ME!
      */
-    void getPackage(String data);
+    void addCustomer();
+
+    /**
+     * TODO DOCUMENT ME!
+     *
+     * @param name TODO DOCUMENT ME!
+     */
+    void addCustomerAround(String name);
 
     /**
      * TODO DOCUMENT ME!
      *
      * @return TODO DOCUMENT ME!
      */
-    String readDataFromPackage();
+    String addCustomerReturnValue();
+
+    /**
+     * TODO DOCUMENT ME!
+     *
+     * @throws Exception
+     */
+    void addCustomerThrowsException() throws Exception;
 }

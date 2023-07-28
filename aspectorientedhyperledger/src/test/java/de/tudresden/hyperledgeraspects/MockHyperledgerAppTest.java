@@ -29,7 +29,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * Unit test for simple App.
  */
-public final class AppTest {
+public final class MockHyperledgerAppTest {
 
     //~ Inner Classes ------------------------------------------------------------------------------------------------------------
 
