@@ -9,11 +9,10 @@
 package de.tudresden.hyperledgeraspects.decoratorlayer;
 
 import org.hyperledger.fabric.contract.annotation.Contract;
+import org.hyperledger.fabric.contract.annotation.Default;
 import org.hyperledger.fabric.contract.annotation.Transaction;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 /**
@@ -22,26 +21,18 @@ import java.util.Map;
  * @author $author$
  */
 @Contract
-public class InventoryDecorator implements InventoryInterface {
-
-    //~ Instance fields ----------------------------------------------------------------------------------------------------------
-
-    /**
-     * TODO DOCUMENT ME!
-     */
-    private InventoryInterface inventory;
+@Default
+public interface InventoryInterface {
 
     //~ Methods ------------------------------------------------------------------------------------------------------------------
 
     /**
      * TODO DOCUMENT ME!
      *
-     * @param product TODO DOCUMENT ME!
+     * @param product data TODO DOCUMENT ME!
      */
-    @Override
     @Transaction
-    public void addProduct(Product product) {
-    }
+    void addProduct(Product product);
 
     /**
      * TODO DOCUMENT ME!
@@ -50,19 +41,16 @@ public class InventoryDecorator implements InventoryInterface {
      *
      * @return TODO DOCUMENT ME!
      */
-    @Override
-    public int getAvailableQuantity(int productID) {
-        return 0;
-    }
+
+    int getAvailableQuantity(int productID);
 
     /**
      * TODO DOCUMENT ME!
      *
      * @param product TODO DOCUMENT ME!
      */
-    @Override
-    public void removeProduct(Product product) {
-    }
+    @Transaction
+    void removeProduct(Product product);
 
     /**
      * TODO DOCUMENT ME!
@@ -71,21 +59,16 @@ public class InventoryDecorator implements InventoryInterface {
      *
      * @return TODO DOCUMENT ME!
      */
-    @Override
-    public int updateInventory(int productID) {
-        inventory.updateInventory(productID);
-
-        return 0;
-    }
+    @Transaction
+    int updateInventory(int productID);
 
     /**
      * TODO DOCUMENT ME!
      *
      * @param productList TODO DOCUMENT ME!
      */
-    @Override
-    public void updateInventory(List<Product> productList) {
-    }
+    @Transaction
+    void updateInventory(List<Product> productList);
 
     /**
      * TODO DOCUMENT ME!
@@ -93,7 +76,6 @@ public class InventoryDecorator implements InventoryInterface {
      * @param productID      TODO DOCUMENT ME!
      * @param quantityChange TODO DOCUMENT ME!
      */
-    @Override
-    public void updateProductQuantity(int productID, int quantityChange) {
-    }
+    @Transaction
+    void updateProductQuantity(int productID, int quantityChange);
 }

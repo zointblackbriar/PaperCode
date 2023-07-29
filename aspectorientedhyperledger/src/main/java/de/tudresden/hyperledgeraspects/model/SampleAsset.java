@@ -20,7 +20,7 @@ import org.json.JSONObject;
  * @author $author$
  */
 @DataType
-public class MyAsset {
+public class SampleAsset {
 
     //~ Instance fields ----------------------------------------------------------------------------------------------------------
 
@@ -33,9 +33,9 @@ public class MyAsset {
     //~ Constructors -------------------------------------------------------------------------------------------------------------
 
     /**
-     * Creates a new {@link MyAsset} object.
+     * Creates a new {@link SampleAsset} object.
      */
-    public MyAsset() {
+    public SampleAsset() {
     }
 
     //~ Methods ------------------------------------------------------------------------------------------------------------------
@@ -47,9 +47,9 @@ public class MyAsset {
      *
      * @return TODO DOCUMENT ME!
      */
-    public static MyAsset fromJSONString(String json) {
+    public static SampleAsset fromJSONString(String json) {
         String value = new JSONObject(json).getString("value");
-        MyAsset asset = new MyAsset();
+        SampleAsset asset = new SampleAsset();
         asset.setValue(value);
 
         return asset;

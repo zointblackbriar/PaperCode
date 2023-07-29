@@ -8,14 +8,14 @@
  */
 package de.tudresden.hyperledgeraspects;
 
-import de.tudresden.hyperledgeraspects.model.MyAssetContract;
+import de.tudresden.hyperledgeraspects.model.HyperledgerAssetContract;
+import de.tudresden.hyperledgeraspects.model.SampleAsset;
 
 import org.hyperledger.fabric.contract.Context;
 
 import org.json.JSONObject;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
@@ -52,8 +52,30 @@ public class MockHyperledgerAppTest {
          * @throws IOException
          */
         @Test
+        public void assetRead() throws IOException {
+            HyperledgerAssetContract myAssetContract = new HyperledgerAssetContract();
+            Context ctx = mock(Context.class);
+            org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
+            when(ctx.getStub()).thenReturn(stub);
+
+            SampleAsset asset = new SampleAsset();
+            asset.setValue("Valuable");
+
+            JSONObject json = new JSONObject(asset);
+            when(stub.getState("10001")).thenReturn(json.toString().getBytes());
+
+            SampleAsset returnedAsset = myAssetContract.readMyAsset(ctx, "10001");
+            Assertions.assertEquals(returnedAsset.getValue(), "Valuable");
+        }
+
+        /**
+         * TODO DOCUMENT ME!
+         *
+         * @throws IOException
+         */
+        @Test
         public void newAssetCreate() throws IOException {
-            MyAssetContract myAssetContract = new MyAssetContract();
+            HyperledgerAssetContract myAssetContract = new HyperledgerAssetContract();
             Context ctx = mock(Context.class);
             org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -81,7 +103,7 @@ public class MockHyperledgerAppTest {
          */
         @Test
         public void assetDelete() {
-            MyAssetContract myAssetContract = new MyAssetContract();
+            HyperledgerAssetContract myAssetContract = new HyperledgerAssetContract();
             Context ctx = mock(Context.class);
             org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -111,7 +133,7 @@ public class MockHyperledgerAppTest {
          */
         @Test
         public void assetExists() throws IOException {
-            MyAssetContract contract = new MyAssetContract();
+            HyperledgerAssetContract contract = new HyperledgerAssetContract();
             Context ctx = mock(Context.class);
             org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -128,7 +150,7 @@ public class MockHyperledgerAppTest {
          */
         @Test
         public void noProperAsset() throws IOException {
-            MyAssetContract contract = new MyAssetContract();
+            HyperledgerAssetContract contract = new HyperledgerAssetContract();
             Context ctx = mock(Context.class);
             org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -145,7 +167,7 @@ public class MockHyperledgerAppTest {
          */
         @Test
         public void testingWithNoKey() throws IOException {
-            MyAssetContract contract = new MyAssetContract();
+            HyperledgerAssetContract contract = new HyperledgerAssetContract();
             Context ctx = mock(Context.class);
             org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -173,7 +195,7 @@ public class MockHyperledgerAppTest {
          */
         @Test
         public void updateAsset() throws IOException {
-            MyAssetContract contract = new MyAssetContract();
+            HyperledgerAssetContract contract = new HyperledgerAssetContract();
             Context ctx = mock(Context.class);
             org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);
@@ -192,7 +214,7 @@ public class MockHyperledgerAppTest {
          */
         @Test
         public void updateMissingAsset() {
-            MyAssetContract myAssetContract = new MyAssetContract();
+            HyperledgerAssetContract myAssetContract = new HyperledgerAssetContract();
             Context ctx = mock(Context.class);
             org.hyperledger.fabric.shim.ChaincodeStub stub = mock(org.hyperledger.fabric.shim.ChaincodeStub.class);
             when(ctx.getStub()).thenReturn(stub);

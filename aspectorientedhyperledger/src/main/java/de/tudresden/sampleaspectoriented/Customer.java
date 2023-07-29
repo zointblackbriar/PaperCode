@@ -25,9 +25,11 @@ public interface Customer {
     /**
      * TODO DOCUMENT ME!
      *
-     * @param name TODO DOCUMENT ME!
+     * @param  name TODO DOCUMENT ME!
+     *
+     * @return
      */
-    void addCustomerAround(String name);
+    String addCustomerAround(String name);
 
     /**
      * TODO DOCUMENT ME!

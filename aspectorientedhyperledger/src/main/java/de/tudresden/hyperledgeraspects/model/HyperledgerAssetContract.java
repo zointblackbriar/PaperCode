@@ -22,9 +22,9 @@ import java.nio.charset.StandardCharsets;
 
 
 /**
- * TODO DOCUMENT ME!
+ * Main Contract class for the Hyperledger Aspects sample application.
  *
- * @author $author$
+ * @author Orcun Oruc
  */
 @Contract(
     name = "MyAssetContract", info =
@@ -35,14 +35,14 @@ import java.nio.charset.StandardCharsets;
         )
 )
 @Default
-public class MyAssetContract {
+public class HyperledgerAssetContract {
 
     //~ Constructors -------------------------------------------------------------------------------------------------------------
 
     /**
-     * Creates a new {@link MyAssetContract} object.
+     * Creates a new {@link HyperledgerAssetContract} object.
      */
-    public MyAssetContract() {
+    public HyperledgerAssetContract() {
     }
 
     //~ Methods ------------------------------------------------------------------------------------------------------------------
@@ -50,9 +50,9 @@ public class MyAssetContract {
     /**
      * TODO DOCUMENT ME!
      *
-     * @param  ctx       TODO DOCUMENT ME!
-     * @param  myAssetID TODO DOCUMENT ME!
-     * @param  value     TODO DOCUMENT ME!
+     * @param  ctx       Context parameter indicating
+     * @param  myAssetID the id of the asset to be created
+     * @param  value     The string value of the asset to be created
      *
      * @throws IOException
      * @throws RuntimeException
@@ -65,7 +65,7 @@ public class MyAssetContract {
             throw new RuntimeException("The asset " + myAssetID + " already exists");
         }
 
-        MyAsset asset = new MyAsset();
+        SampleAsset asset = new SampleAsset();
         asset.setValue(value);
         ctx.getStub().putState(myAssetID, asset.toJSONString().getBytes(StandardCharsets.UTF_8));
     }
@@ -73,10 +73,10 @@ public class MyAssetContract {
     /**
      * TODO DOCUMENT ME!
      *
-     * @param  ctx       TODO DOCUMENT ME!
-     * @param  myAssetID TODO DOCUMENT ME!
+     * @param  ctx       Context parameter indicating
+     * @param  myAssetID id of the asset to be deleted
      *
-     * @return TODO DOCUMENT ME!
+     * @return Return boolean value indicating whether the asset was deleted or not
      *
      * @throws IOException
      * @throws RuntimeException
@@ -118,10 +118,10 @@ public class MyAssetContract {
     }
 
     /**
-     * TODO DOCUMENT ME!
+     * To read an asset by getting its state from the blockchain network.
      *
-     * @param  ctx       TODO DOCUMENT ME!
-     * @param  myAssetID TODO DOCUMENT ME!
+     * @param  ctx       Context parameter indicating
+     * @param  myAssetID assetID necessary
      *
      * @return TODO DOCUMENT ME!
      *
@@ -129,14 +129,14 @@ public class MyAssetContract {
      * @throws RuntimeException
      */
     @Transaction
-    public MyAsset readMyAsset(Context ctx, String myAssetID) throws IOException {
+    public SampleAsset readMyAsset(Context ctx, String myAssetID) throws IOException {
         boolean exists = myAssetExists(ctx, myAssetID);
 
         if (!exists) {
             throw new RuntimeException("The asset " + myAssetID + " does not exist");
         }
 
-        MyAsset asset = MyAsset.fromJSONString(new String(ctx.getStub().getState(myAssetID), StandardCharsets.UTF_8));
+        SampleAsset asset = SampleAsset.fromJSONString(new String(ctx.getStub().getState(myAssetID), StandardCharsets.UTF_8));
 
         return asset;
     }
@@ -144,9 +144,9 @@ public class MyAssetContract {
     /**
      * TODO DOCUMENT ME!
      *
-     * @param  ctx       TODO DOCUMENT ME!
-     * @param  myAssetId TODO DOCUMENT ME!
-     * @param  newValue  TODO DOCUMENT ME!
+     * @param  ctx       Context parameter indicating
+     * @param  myAssetId id of the asset
+     * @param  newValue  updating with a new value
      *
      * @throws IOException
      * @throws RuntimeException
@@ -159,7 +159,7 @@ public class MyAssetContract {
             throw new RuntimeException("The asset does not exist");
         }
 
-        MyAsset asset = new MyAsset();
+        SampleAsset asset = new SampleAsset();
         asset.setValue(newValue);
         ctx.getStub().putState(myAssetId, asset.toJSONString().getBytes(StandardCharsets.UTF_8));
     }

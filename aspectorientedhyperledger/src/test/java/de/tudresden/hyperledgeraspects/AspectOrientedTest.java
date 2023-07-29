@@ -8,6 +8,7 @@
  */
 package de.tudresden.hyperledgeraspects;
 
+import de.tudresden.sampleaspectoriented.Customer;
 import de.tudresden.sampleaspectoriented.aspectmicro.RunningAspect;
 
 import org.aspectj.lang.Signature;
@@ -15,6 +16,11 @@ import org.aspectj.lang.reflect.SourceLocation;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.test.context.ContextConfiguration;
 
 
 /**
@@ -22,7 +28,27 @@ import org.junit.jupiter.api.Test;
  *
  * @author $author$
  */
+@ContextConfiguration(locations = "classpath:Hyperledger-Customer.xml")
 public class AspectOrientedTest {
+
+    //~ Instance fields ----------------------------------------------------------------------------------------------------------
+
+    /**
+     * TODO DOCUMENT ME!
+     */
+    private Customer customer;
+
+    //~ Constructors -------------------------------------------------------------------------------------------------------------
+
+    /**
+     * Creates a new {@link AspectOrientedTest} object.
+     *
+     * @param customer TODO DOCUMENT ME!
+     */
+    @Autowired
+    public AspectOrientedTest(Customer customer) {
+        customer = customer;
+    }
 
     //~ Methods ------------------------------------------------------------------------------------------------------------------
 
@@ -35,7 +61,16 @@ public class AspectOrientedTest {
         JoinPointMock joinPoint = new JoinPointMock();
         Throwable error = new RuntimeException("Test exception");
         boolean result = runningAspect.logAfterThrowing(joinPoint, error);
-        Assertions.assertTrue(result);
+        Assertions.assertFalse(result);
+    }
+
+    /**
+     * TODO DOCUMENT ME!
+     */
+    @Test
+    public void testAddCustomerAround() {
+        String result = customer.addCustomerAround("hyperledger has been activated");
+        Assertions.assertEquals("hyperledger has been activated", result);
     }
 
     //~ Inner Classes ------------------------------------------------------------------------------------------------------------
