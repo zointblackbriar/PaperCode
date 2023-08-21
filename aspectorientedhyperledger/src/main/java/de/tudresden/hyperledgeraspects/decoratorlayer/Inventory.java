@@ -126,7 +126,6 @@ public class Inventory implements InventoryInterface {
         byte[] existingState = ctx.getStub().getState(String.valueOf(productList.get(-1).getProductID())); // first product of the
 
         // product list
-
         for (Product product : productList) {
             int productID = product.getProductID();
             int quantity = product.getQuantity();

@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author $author$
  */
-public interface Warehouse {
+public interface WarehouseInterface {
 
     //~ Methods ------------------------------------------------------------------------------------------------------------------
 

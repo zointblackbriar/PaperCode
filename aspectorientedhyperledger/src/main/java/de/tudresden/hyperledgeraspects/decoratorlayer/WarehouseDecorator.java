@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author $author$
  */
-public class WarehouseDecorator implements Warehouse {
+public class WarehouseDecorator implements WarehouseInterface {
 
     //~ Methods ------------------------------------------------------------------------------------------------------------------
 
@@ -30,6 +30,10 @@ public class WarehouseDecorator implements Warehouse {
     @Override
     public boolean checkInventoryAvailability(List<Product> productList) {
         // TODO Auto-generated method stub
+        if (productList.size() != 0) {
+            return true;
+        }
+
         return false;
     }
 
@@ -38,7 +42,7 @@ public class WarehouseDecorator implements Warehouse {
      */
     public void optimizeOperation() {
         System.out.println("Warehouse operations optimized for picking and packing");
-        // How to optimize this function with picking and packing operations
+        // How to optimize this function with picking and packing operations - This is a big question
     }
 
     /**

@@ -24,13 +24,4 @@ public class SupplyChainNetwork {
 
     // Method to be placed an order in the suppy chain network
 
-    /**
-     * TODO DOCUMENT ME!
-     *
-     * @param order TODO DOCUMENT ME!
-     */
-    // public void placeOrder(Order order) {
-    // if ((order != null) && (order.getProductList() != null) && !order.getProductList().isEmpty()) {
-    // }
-    // }
 }

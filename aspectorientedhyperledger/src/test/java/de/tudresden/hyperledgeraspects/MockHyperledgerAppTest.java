@@ -99,7 +99,7 @@ public class MockHyperledgerAppTest {
         //~ Methods --------------------------------------------------------------------------------------------------------------
 
         /**
-         * TODO DOCUMENT ME!
+         * Asset Deletion Test.
          */
         @Test
         public void assetDelete() {
@@ -117,9 +117,9 @@ public class MockHyperledgerAppTest {
     }
 
     /**
-     * TODO DOCUMENT ME!
+     * Nested class for the sake of testing purposes.
      *
-     * @author $author$
+     * @author Orcun Oruc
      */
     @Nested
     class AssetExists {
@@ -127,7 +127,7 @@ public class MockHyperledgerAppTest {
         //~ Methods --------------------------------------------------------------------------------------------------------------
 
         /**
-         * TODO DOCUMENT ME!
+         * Assets are tested to determine whether they exist or not.
          *
          * @throws IOException
          */
@@ -144,7 +144,7 @@ public class MockHyperledgerAppTest {
         }
 
         /**
-         * TODO DOCUMENT ME!
+         * Null Asset test.
          *
          * @throws IOException
          */
@@ -161,7 +161,7 @@ public class MockHyperledgerAppTest {
         }
 
         /**
-         * TODO DOCUMENT ME!
+         * Test for the key existence of an asset of Hyperledger Chaincode.
          *
          * @throws IOException
          */
@@ -179,9 +179,9 @@ public class MockHyperledgerAppTest {
     }
 
     /**
-     * TODO DOCUMENT ME!
+     * Asset Updates nested group.
      *
-     * @author $author$
+     * @author Orcun Oruc
      */
     @Nested
     class AssetUpdates {
