@@ -4,7 +4,6 @@ pragma solidity >=0.8.7;
 import "./factory-fundamental/CellConfigurator.sol"; 
 import "./factory-fundamental/CellConfiguratorController.sol";
 import "./factory-fundamental/CellMaintenanceAgent.sol";
-// import "./FactoryBoxRoles.sol";
 
 import "./RoleLibrary.sol";
 
