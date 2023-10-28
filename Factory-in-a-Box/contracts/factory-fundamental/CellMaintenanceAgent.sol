@@ -7,7 +7,7 @@ contract CellMaintenanceAgent is FactoryBoxRoles{
     event Logging(string description, string problemDefinition); 
 
     constructor() {
-        emit Logging("constructor has been called", "");
+        emit Logging("CellMaintenanceAgent constructor has been called", "");
     }
 
     function assignLogging(string memory _description, string memory _problemDefinition) public {

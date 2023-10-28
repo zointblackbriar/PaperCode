@@ -44,5 +44,4 @@ contract CellConfigurator is FactoryBoxRoles {
     function getType() public pure override returns(Constants.ClassType) {
         return Constants.ClassType.CellConfigurator;
     }
-
 }
