@@ -3,9 +3,7 @@ pragma solidity >=0.8.7;
 
 import "./FactoryBoxRoles.sol";
 
-
-//This contract is just for Logging and Monitoring for entire system
-contract CellMaintenanceAgent {
+contract CellMaintenanceAgent is FactoryBoxRoles{
     event Logging(string description, string problemDefinition); 
 
     constructor() {
@@ -16,8 +14,8 @@ contract CellMaintenanceAgent {
         emit Logging(_description, _problemDefinition);
     }
 
-    // function getType() public pure override returns(Constants.ClassType) {
-    //     return Constants.ClassType.CellMaintenanceAgent;
-    // }
+    function getType() public pure override returns(Constants.ClassType) {
+        return Constants.ClassType.CellMaintenanceAgent;
+    }
 
 }

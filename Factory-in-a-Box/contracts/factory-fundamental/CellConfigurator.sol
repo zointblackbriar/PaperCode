@@ -4,7 +4,7 @@ pragma solidity >=0.8.7;
 import "./FactoryBoxRoles.sol";
 
 
-contract CellConfigurator {
+contract CellConfigurator is FactoryBoxRoles {
 // contract CellConfigurator {
     //Each participant should have unique Id in the network. 
     string public companyName; 
@@ -41,8 +41,8 @@ contract CellConfigurator {
         companyId = _companyId;
     }
 
-    // function getType() public pure override returns(Constants.ClassType) {
-    //     return Constants.ClassType.CellConfigurator;
-    // }
+    function getType() public pure override returns(Constants.ClassType) {
+        return Constants.ClassType.CellConfigurator;
+    }
 
 }
