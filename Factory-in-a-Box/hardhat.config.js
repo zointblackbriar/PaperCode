@@ -41,7 +41,7 @@ module.exports = {
     },
     paths: {
       sources: './contracts',
-      tests: './tests',
+      tests: './test',
       url: 'http://127.0.0.1:8545',
       cache: './cache',
       artifacts: './artifacts',

@@ -2,8 +2,12 @@
 pragma solidity >=0.8.7; 
 
 import "./FactoryBoxRoles.sol";
+import "./Cobot.sol";
 
+/// @dev the background of the Cell Configurator is the need for a visual and intuitive way
+// to program and control robotic working cell.
 
+/// @dev CellConfigurator contains pair of robots that cooperate while assembling a cabinet 
 contract CellConfigurator is FactoryBoxRoles {
 // contract CellConfigurator {
     //Each participant should have unique Id in the network. 
@@ -12,17 +16,16 @@ contract CellConfigurator is FactoryBoxRoles {
     bool public isProductionEnviornmentLeased; 
     string public serviceProviderID; //public key of service provider ID
     string public machineID; //public key of machine asset
+    
     address owner; 
-    mapping(address => uint) balance; 
 
     modifier onlyOwner() {
         require(msg.sender == owner); 
         _;
     }
 
-    constructor(uint sampleAsset) {
+    constructor() {
         owner = msg.sender;
-        balance[msg.sender] = sampleAsset;
     }
 
     function getCompanyName() public view returns(string memory) {

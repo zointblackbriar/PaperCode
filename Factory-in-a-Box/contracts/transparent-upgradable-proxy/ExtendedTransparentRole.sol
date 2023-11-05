@@ -3,7 +3,7 @@ pragma solidity >=0.8.7;
 
 
 import "./TransparentUpgradeableProxy.sol";
-
+/// @dev can be eliminated
 //@dev this is only in the development stage. Further improvements necessary
 contract ExtendedTransparentRole {
 
