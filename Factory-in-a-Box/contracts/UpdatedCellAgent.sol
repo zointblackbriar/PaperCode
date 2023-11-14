@@ -28,8 +28,12 @@ contract UpdatedCellAgent is Initializable, UUPSUpgradeable, OwnableUpgradeable 
         return "Updated Role Version1";
     }
 
+    function setStateVariable() public  {
+        sampleVariable = 1;
+    }
+
     function changeStateVariable() external {
-        require(sampleVariable > 1, "be careful about the state variable"); 
+        // require(sampleVariable > 1, "be careful about the state variable"); 
         sampleVariable += 3; 
     }
 

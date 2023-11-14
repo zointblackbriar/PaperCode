@@ -4,6 +4,11 @@ pragma solidity >=0.8.7;
 import "./FactoryBoxRoles.sol";
 
 /// @dev this will check the location of the machinnery
+/// @dev The Cell Designer is used to create a layout of the cell using drag-and-drop techniques.
+/// @dev it also alleos the user to configure some of the properties of the different equipments that are added to the cell, such as I/O signals and variables.
+/// @dev The Sequence Programmer is used to program the behavior of the cell using an icon-based flowchart programming style. 
+/// @dev The Production window is used during production to allow the user to start and stop production, as well as monitor the production process - statistics
+// and perform maintenance plan.
 contract CellConfiguratorController is FactoryBoxRoles{
     event Logging(string description);
 

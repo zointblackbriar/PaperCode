@@ -108,3 +108,11 @@ Documents your database design and schemas, relations etc...
 ## Licensing
 
 State what the license is and how to find the text version of the license.
+
+## Sample Diagram for the Architecture
+
+We need to comply with the following diagram: 
+
+![general architecture](img/GeneralSchemaCellAgent.png)
+
+We need to define some test cases for stop production and keep going with minor software configuration issues.
