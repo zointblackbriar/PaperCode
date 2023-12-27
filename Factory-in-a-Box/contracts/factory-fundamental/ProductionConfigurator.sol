@@ -8,8 +8,7 @@ import "./Cobot.sol";
 // to program and control robotic working cell.
 
 /// @dev CellConfigurator contains pair of robots that cooperate while assembling a cabinet 
-contract CellConfigurator is FactoryBoxRoles {
-// contract CellConfigurator {
+contract ProductionConfigurator is FactoryBoxRoles {
     //Each participant should have unique Id in the network. 
     string public companyName; 
     string  public companyId; 
@@ -45,6 +44,6 @@ contract CellConfigurator is FactoryBoxRoles {
     }
 
     function getType() public pure override returns(Constants.ClassType) {
-        return Constants.ClassType.CellConfigurator;
+        return Constants.ClassType.ProductionConfigurator;
     }
 }

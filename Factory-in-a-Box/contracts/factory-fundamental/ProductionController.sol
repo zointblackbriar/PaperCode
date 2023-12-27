@@ -9,7 +9,7 @@ import "./FactoryBoxRoles.sol";
 /// @dev The Sequence Programmer is used to program the behavior of the cell using an icon-based flowchart programming style. 
 /// @dev The Production window is used during production to allow the user to start and stop production, as well as monitor the production process - statistics
 // and perform maintenance plan.
-contract CellConfiguratorController is FactoryBoxRoles{
+contract ProductionController is FactoryBoxRoles{
     event Logging(string description);
 
     constructor() {
@@ -17,7 +17,7 @@ contract CellConfiguratorController is FactoryBoxRoles{
     }
 
     function getType() public pure override returns(Constants.ClassType) {
-        return Constants.ClassType.CellConfiguratorController;
+        return Constants.ClassType.ProductionController;
     }
 
     // Define a mapping that uses bytes 32 (fixed-size keys) to associate with string values.
