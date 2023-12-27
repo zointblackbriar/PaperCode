@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: MIT 
 pragma solidity >=0.8.7;
 
-import "./UpdatedCellAgent.sol";
+import "./UpdatedMaintenanceAgent.sol";
 
-contract UpdatedCellAgentV2 is UpdatedCellAgent {
+contract UpdatedMaintenanceAgentV2 is UpdatedMaintenanceAgent {
     function refillStateVariable() external {
         sampleVariable -= 1;
     }

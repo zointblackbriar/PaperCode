@@ -13,7 +13,7 @@ import "hardhat/console.sol";
 // whereas in the transparent proxy pattern, the upgrade is done via the proxy contract
 // changeStateVariable() : A simple function to reduce the storage variable whenever called
 
-contract UpdatedCellAgent is Initializable, 
+contract UpdatedMaintenanceAgent is Initializable, 
 UUPSUpgradeable, 
 OwnableUpgradeable,
 PausableUpgradeable {

@@ -9,15 +9,15 @@ describe("CellConfigurator", () => {
     let cellConfiguratorController;
     let cellConfiguratorAgent;
     beforeEach(async() => {
-        const CellConfigurator = await ethers.getContractFactory("CellConfigurator");
+        const CellConfigurator = await ethers.getContractFactory("ProductionConfigurator");
         cellConfigurator = await CellConfigurator.deploy(); 
         await cellConfigurator.deployed();
 
-        const CellConfiguratorController = await ethers.getContractFactory("CellConfiguratorController");
+        const CellConfiguratorController = await ethers.getContractFactory("ProductionController");
         cellConfiguratorController = await CellConfiguratorController.deploy(); 
         await cellConfiguratorController.deployed();
 
-        const CellMaintenanceAgent = await ethers.getContractFactory("CellMaintenanceAgent");
+        const CellMaintenanceAgent = await ethers.getContractFactory("MaintenanceAgent");
         cellMaintenanceAgent = await CellMaintenanceAgent.deploy(); 
         await cellMaintenanceAgent.deployed();
 

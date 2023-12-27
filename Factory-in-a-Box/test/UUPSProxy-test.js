@@ -2,26 +2,26 @@ const { expect} = require('chai');
 const {ethers} = require('hardhat');
 
 describe('UpdatedCellAgent', function() {
-    let updatedCellAgent;
-    let updatedCellAgentV2;
+    let updatedMaintenanceAgent;
+    let updatedMaintenanceAgentV2;
     beforeEach(async function()  {
-        const UpdatedCellAgent = await ethers.getContractFactory("UpdatedCellAgent");
-        const UpdatedCellAgentV2 = await ethers.getContractFactory("UpdatedCellAgentV2");
-        updatedCellAgent = await UpdatedCellAgent.deploy();
-        updatedCellAgentV2 = await UpdatedCellAgentV2.deploy();
-        await updatedCellAgent.deployed();
-        await updatedCellAgentV2.deployed();
+        const UpdatedAgent = await ethers.getContractFactory("UpdatedMaintenanceAgent");
+        const UpdatedAgentV2 = await ethers.getContractFactory("UpdatedMaintenanceAgentV2");
+        updatedMaintenanceAgent = await UpdatedAgent.deploy();
+        updatedMaintenanceAgentV2 = await UpdatedAgentV2.deploy();
+        await updatedMaintenanceAgent.deployed();
+        await updatedMaintenanceAgentV2.deployed();
     });
 
-    it('should deploy the updated cell agent', async function() {
+    it('should deploy the updated maintenance agent', async function() {
 
         // Cell the changeStateVariable function
-        await updatedCellAgent.changeStateVariable(); 
+        await updatedMaintenanceAgent.changeStateVariable(); 
 
         // Verify that the state variable has been changed
-        await updatedCellAgent.setStateVariable();
-        await updatedCellAgent.sampleVariable();
-        await updatedCellAgent.changeStateVariable();
-        expect(await updatedCellAgent.sampleVariable()).to.equal(4);
+        await updatedMaintenanceAgent.setStateVariable();
+        await updatedMaintenanceAgent.sampleVariable();
+        await updatedMaintenanceAgent.changeStateVariable();
+        expect(await updatedMaintenanceAgent.sampleVariable()).to.equal(4);
     });
 });
