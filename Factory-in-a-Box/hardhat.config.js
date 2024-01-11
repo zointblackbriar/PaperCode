@@ -1,5 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require('@nomiclabs/hardhat-truffle5');
+require("hardhat-gas-reporter");
+
 require('dotenv').config()
 // console.log(process.env)
 
@@ -29,7 +31,11 @@ module.exports = {
       }
     }
   },
-
+  
+  gasReporter: {
+    currency: "USD",
+    gasPrice: "USD",
+  },
   networks:  {
     hardhat: {
     },
