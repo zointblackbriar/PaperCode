@@ -8,12 +8,13 @@ import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 
 import "hardhat/console.sol";
+import "../factory-fundamental/MachineOperationConstant.sol";
 // initialize() : Upgradable contracts should have an initialize method in place of constructors, and also the initializer keyword makes sure that the contract is initialized only once
 // _authorizeUpgrade() : This method is required to safeguard from unauthorized upgrades because in the UUPS pattern the upgrade is done from the implementation contract, 
 // whereas in the transparent proxy pattern, the upgrade is done via the proxy contract
 // changeStateVariable() : A simple function to reduce the storage variable whenever called
 
-contract UpdatedMaintenanceAgent is Initializable, 
+contract UpdatedRobotArm is Initializable, 
 UUPSUpgradeable, 
 OwnableUpgradeable,
 PausableUpgradeable {
@@ -23,24 +24,21 @@ PausableUpgradeable {
     // function _authorizeUpgrade(address) internal override onlyOwner {}
 
     function initializeRoleOwner(address roleAddress) public initializer {
-
     }
 
     //Sample function to get a message
     function getMessage() public pure returns(string memory) {
-        return "Updated Role Version1";
+        return "Updated RobotArm Role";
     }
 
-    function setStateVariable() public  {
-        sampleVariable = 1;
+    function setDifferentMachineryState(MachineOperationConstant.MachineOperation machineryState) public  {
+        // sampleVariable = 1;
     }
 
-    function changeStateVariable() external {
+    function addFunctionalityToRobotArm() external pure returns(string memory) {
         // require(sampleVariable > 1, "be careful about the state variable"); 
-        sampleVariable += 3; 
+        return "Updated RobotArm";
     }
-
-
 
     ///@dev required by the Openzeppelin UUPS module
     function _authorizeUpgrade(address newImplementationAddress)

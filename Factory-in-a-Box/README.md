@@ -116,3 +116,97 @@ We need to comply with the following diagram:
 ![general architecture](img/GeneralSchemaCellAgent.png)
 
 We need to define some test cases for stop production and keep going with minor software configuration issues.
+
+
+## Sample Requiement Analysis
+
+- Functional Requirements: 
+    - Drilling: 
+        - The system shall support drilling operations to create holes of specified diameters and depths.
+        - It should be capable of handling various drill bit types and materials.
+    - Slot Milling: 
+        - The system shall enable slot milling for creating slots with defined widths and lengths
+        - It should support different milling tools suitable for slot milling operations.
+    - Slab Milling:
+        - The system shall support slab milling for removing material from large flat surfaces.
+        - It should allow the user to specify cutting parameters such as depth of cut and feed rate.
+    - Step Milling: 
+        - The system shall enable step milling for creating stepped surfaces.
+        - It should provide options for defining step heights and widths.
+    - Shaping:
+        - The system shall support shaping operations to generate contoured surfaces.
+        - It should allow users to define complex shapes and contours.
+    - Reaming: 
+        - The system shall support reaming operations for achieving high-precision hole dimensions.
+        - It should accommodate different reaming tools and materials.
+
+# Sample Requirement Analysis for Factory-in-a-Box members
+
+FactoryBoxRoles:
+Role Definition:
+
+The system must allow the definition and configuration of various roles within a Factory Box.
+Roles should include Maintenance Agent, Production Configurator, Production Controller, and Robot Arms.
+Role Assignment:
+
+Authorized users should be able to assign specific roles to individuals based on their responsibilities and qualifications.
+
+MaintenanceAgent:
+Maintenance Tasks:
+
+Maintenance Agents should be able to log and manage maintenance tasks for machinery within the Factory Box.
+Task Assignment:
+
+The system should allow the assignment of maintenance tasks to specific Maintenance Agents based on their expertise.
+
+ProductionConfigurator:
+Production Configuration:
+
+Production Configurators should have the ability to define and configure production processes within the Factory Box.
+Resource Allocation:
+
+Allocate resources efficiently for each production run based on predefined configurations.
+
+ProductionController:
+
+Production Monitoring:
+
+Production Controllers should monitor and oversee ongoing production processes within the Factory Box.
+Quality Control:
+
+Implement quality control measures during production to ensure the output meets specified standards.
+Non-Functional Requirements:
+Real-time Data:
+
+Provide real-time data and analytics for efficient decision-making during production.
+Integration:
+
+The system should integrate seamlessly with other Factory Box components.
+
+RobotArms:
+Functional Requirements:
+Robotic Operations:
+
+Robot Arms must perform specified operations as part of the production processes.
+Precision:
+
+Ensure precision and accuracy in executing tasks assigned during production.
+
+RolesConstant:
+Functional Requirements:
+Constant Definitions:
+
+RolesConstant must define constants for various roles within the Factory Box.
+Consistency:
+
+Ensure consistency in role names and definitions across the system.
+
+MachineOperationConstant:
+
+Operation Definitions:
+
+MachineOperationConstant should define constants for various machine operations.
+Clarity:
+
+Ensure clear and concise definitions for each machine operation constant.
+

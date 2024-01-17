@@ -5,8 +5,8 @@ describe('UpdatedCellAgent', function() {
     let updatedMaintenanceAgent;
     let updatedMaintenanceAgentV2;
     beforeEach(async function()  {
-        const UpdatedAgent = await ethers.getContractFactory("UpdatedMaintenanceAgent");
-        const UpdatedAgentV2 = await ethers.getContractFactory("UpdatedMaintenanceAgentV2");
+        const UpdatedAgent = await ethers.getContractFactory("UpdatedRobotArm");
+        const UpdatedAgentV2 = await ethers.getContractFactory("UpdatedRobotArmV2");
         updatedMaintenanceAgent = await UpdatedAgent.deploy();
         updatedMaintenanceAgentV2 = await UpdatedAgentV2.deploy();
         await updatedMaintenanceAgent.deployed();
@@ -16,12 +16,7 @@ describe('UpdatedCellAgent', function() {
     it('should deploy the updated maintenance agent', async function() {
 
         // Cell the changeStateVariable function
-        await updatedMaintenanceAgent.changeStateVariable(); 
+        expect(await updatedMaintenanceAgent.addFunctionalityToRobotArm()).to.be.equal("Updated RobotArm"); 
 
-        // Verify that the state variable has been changed
-        await updatedMaintenanceAgent.setStateVariable();
-        await updatedMaintenanceAgent.sampleVariable();
-        await updatedMaintenanceAgent.changeStateVariable();
-        expect(await updatedMaintenanceAgent.sampleVariable()).to.equal(4);
     });
 });

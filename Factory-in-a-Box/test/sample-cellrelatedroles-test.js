@@ -1,25 +1,22 @@
-
-
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-// const CellConfigurator = artifacts.require("CellConfigurator"); 
 describe("CellConfigurator", () => {
-    let cellConfigurator;
-    let cellConfiguratorController;
-    let cellConfiguratorAgent;
+    let productionController;
+    let productionConfigurator;
+    let maintenanceAgent;
     beforeEach(async() => {
-        const CellConfigurator = await ethers.getContractFactory("ProductionConfigurator");
-        cellConfigurator = await CellConfigurator.deploy(); 
-        await cellConfigurator.deployed();
+        const ProductionConfigurator = await ethers.getContractFactory("ProductionConfigurator");
+        productionConfigurator = await ProductionConfigurator.deploy(); 
+        await productionConfigurator.deployed();
 
-        const CellConfiguratorController = await ethers.getContractFactory("ProductionController");
-        cellConfiguratorController = await CellConfiguratorController.deploy(); 
-        await cellConfiguratorController.deployed();
+        const ProductionController = await ethers.getContractFactory("ProductionController");
+        productionController = await ProductionController.deploy(); 
+        await productionController.deployed();
 
-        const CellMaintenanceAgent = await ethers.getContractFactory("MaintenanceAgent");
-        cellMaintenanceAgent = await CellMaintenanceAgent.deploy(); 
-        await cellMaintenanceAgent.deployed();
+        const MaintenanceAgent = await ethers.getContractFactory("MaintenanceAgent");
+        maintenanceAgent = await MaintenanceAgent.deploy(); 
+        await maintenanceAgent.deployed();
 
 
     }); 
@@ -34,34 +31,34 @@ describe("CellConfigurator", () => {
     });
 
     it("sample test for getCompanyName", async() => {
-        await cellConfigurator.setCompanyName("Production Incorporate");
-        expect(await cellConfigurator.getCompanyName()).to.equal("Production Incorporate");
+        await productionConfigurator.setCompanyName("Production Incorporate");
+        expect(await productionConfigurator.getCompanyName()).to.equal("Production Incorporate");
     }); 
 
     it("getting ID of the company", async() => {
-        await cellConfigurator.setCompanyId("21"); 
-        console.log(String(cellConfigurator.companyId()));
-        expect(await cellConfigurator.companyId()).to.equal("21");
+        await productionConfigurator.setCompanyId("21"); 
+        console.log(String(productionConfigurator.companyId()));
+        expect(await productionConfigurator.companyId()).to.equal("21");
     });
 
-    it("should return Constants.ClassType.CellConfigurator", async() => {
-        const contractType1 = await cellConfigurator.getType();
-        const contractType2 = await cellConfiguratorController.getType();
-        const contractType3 = await cellMaintenanceAgent.getType();
-        expect(await cellConfigurator.getType()).to.equal(0);
-        expect(await cellConfiguratorController.getType()).to.equal(1);
-        expect(await cellMaintenanceAgent.getType()).to.equal(2);
+    it("should return Constants.ClassType.productionConfigurator", async() => {
+        const contractType1 = await productionConfigurator.roleAssignment();
+        const contractType2 = await productionController.roleAssignment();
+        const contractType3 = await maintenanceAgent.roleAssignment();
+        expect(await productionConfigurator.roleAssignment()).to.equal(0);
+        expect(await productionController.roleAssignment()).to.equal(1);
+        expect(await maintenanceAgent.roleAssignment()).to.equal(2);
     });
 
     it("should emit a Logging event when the constructor is called", async function() {
-        const tx = await cellConfiguratorController.deployTransaction;
+        const tx = await productionController.deployTransaction;
         const receipt = await tx.wait(); 
         const loggingEvent = receipt.events.find((event) => event.event == "Logging");
         console.log("loggingEvent is: " + loggingEvent);
 
         expect(loggingEvent).to.not.be.undefined;
-        expect(loggingEvent.args.description).to.equal("CellConfiguratorController constructor has been called");
+        expect(loggingEvent.args.description).to.equal("productionConfigurator constructor has been called");
 
-    })
+    });
 
 }); 

@@ -13,10 +13,10 @@ contract ProductionController is FactoryBoxRoles{
     event Logging(string description);
 
     constructor() {
-        emit Logging("CellConfiguratorController constructor has been called");
+        emit Logging("productionConfigurator constructor has been called");
     }
 
-    function getType() public pure override returns(Constants.ClassType) {
+    function roleAssignment() public pure override returns(Constants.ClassType) {
         return Constants.ClassType.ProductionController;
     }
 

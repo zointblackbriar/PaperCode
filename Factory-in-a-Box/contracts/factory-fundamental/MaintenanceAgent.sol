@@ -14,7 +14,7 @@ contract MaintenanceAgent is FactoryBoxRoles{
         emit Logging(_description, _problemDefinition);
     }
 
-    function getType() public pure override returns(Constants.ClassType) {
+    function roleAssignment() public pure override returns(Constants.ClassType) {
         return Constants.ClassType.MaintenanceAgent;
     }
 

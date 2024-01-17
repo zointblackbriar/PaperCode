@@ -33,8 +33,10 @@ module.exports = {
   },
   
   gasReporter: {
-    currency: "USD",
-    gasPrice: "USD",
+    enabled: true, // gasReporter enabled
+    outputFile: "gas-report-testcases.out",
+    // currency: "USD",
+    token: "ETH",
   },
   networks:  {
     hardhat: {
