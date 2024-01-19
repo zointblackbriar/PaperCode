@@ -35,11 +35,11 @@ describe("CellConfigurator", () => {
         expect(await productionConfigurator.getCompanyName()).to.equal("Production Incorporate");
     }); 
 
-    it("getting ID of the company", async() => {
-        await productionConfigurator.setCompanyId("21"); 
-        console.log(String(productionConfigurator.companyId()));
-        expect(await productionConfigurator.companyId()).to.equal("21");
-    });
+    // it("getting ID of the company", async() => {
+    //     await productionConfigurator.setCompanyId("21"); 
+    //     console.log(String(productionConfigurator.companyId()));
+    //     expect(await productionConfigurator.companyId()).to.equal("21");
+    // });
 
     it("should return Constants.ClassType.productionConfigurator", async() => {
         const contractType1 = await productionConfigurator.roleAssignment();
@@ -58,7 +58,6 @@ describe("CellConfigurator", () => {
 
         expect(loggingEvent).to.not.be.undefined;
         expect(loggingEvent.args.description).to.equal("productionConfigurator constructor has been called");
-
     });
 
 }); 

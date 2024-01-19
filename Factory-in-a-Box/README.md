@@ -175,8 +175,6 @@ Production Controllers should monitor and oversee ongoing production processes w
 Quality Control:
 
 Implement quality control measures during production to ensure the output meets specified standards.
-Non-Functional Requirements:
-Real-time Data:
 
 Provide real-time data and analytics for efficient decision-making during production.
 Integration:

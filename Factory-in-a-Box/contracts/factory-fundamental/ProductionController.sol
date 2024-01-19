@@ -10,7 +10,28 @@ import "./FactoryBoxRoles.sol";
 /// @dev The Production window is used during production to allow the user to start and stop production, as well as monitor the production process - statistics
 // and perform maintenance plan.
 contract ProductionController is FactoryBoxRoles{
+
+
     event Logging(string description);
+
+    enum QualityStatus {Pending, Approved, Rejected}
+
+    struct ProductionProcess {
+        uint256 processId; 
+        string description; 
+        QualityStatus qualityStatus;
+        uint timestamp;
+    }
+
+    mapping(uint => ProductionProcess) public productionProcess;
+    uint public latestProcessId;
+
+    // Define a mapping that uses bytes 32 (fixed-size keys) to associate with string values.
+    mapping (bytes32 => string) public stringMapping; 
+
+
+    event ProcessStarted(uint processId, string description, uint timestamp);
+    event QualityChecked(uint processId, QualityStatus qualityStatus, uint timestamp);
 
     constructor() {
         emit Logging("productionConfigurator constructor has been called");
@@ -20,8 +41,6 @@ contract ProductionController is FactoryBoxRoles{
         return Constants.ClassType.ProductionController;
     }
 
-    // Define a mapping that uses bytes 32 (fixed-size keys) to associate with string values.
-    mapping (bytes32 => string) public stringMapping; 
 
     // Set the location values
     function setLocationValues(string memory key, string memory value) public {
@@ -33,6 +52,32 @@ contract ProductionController is FactoryBoxRoles{
     function getLocationValues(string memory key) public view returns (string memory ) {
         bytes32 fixedKey = keccak256(abi.encodePacked(key));
         return stringMapping[fixedKey];
+    }
+
+    function startProductionProcess(string memory description) external {
+        latestProcessId++;
+        productionProcess[latestProcessId] = ProductionProcess({
+            processId: latestProcessId,
+            description: description,
+            qualityStatus: QualityStatus.Pending,
+            timestamp: block.timestamp
+        });
+
+        emit ProcessStarted(latestProcessId, description, block.timestamp);
+    }
+
+    function checkProductionQuality(uint256 processId, QualityStatus newStatus) external {
+        require(processId > 0 && processId <= latestProcessId, "Invalid processId");
+        ProductionProcess storage process = productionProcess[processId];
+        require(process.qualityStatus == QualityStatus.Pending, "Quality check should be done");
+        process.qualityStatus = newStatus;
+        emit QualityChecked(processId, process.qualityStatus, block.timestamp);
+    }
+
+    function getProcessDetails(uint processId) external view returns (string memory, QualityStatus, uint) {
+        require(processId > 0 && processId <= latestProcessId, "Invalid processId");
+        ProductionProcess storage process = productionProcess[processId]; // Write the process value to the blockchain network
+        return (process.description, process.qualityStatus, process.timestamp);
     }
 
 }
