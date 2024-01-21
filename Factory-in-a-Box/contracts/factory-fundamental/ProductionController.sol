@@ -27,7 +27,7 @@ contract ProductionController is FactoryBoxRoles{
     uint public latestProcessId;
 
     // Define a mapping that uses bytes 32 (fixed-size keys) to associate with string values.
-    mapping (bytes32 => string) public stringMapping; 
+    // mapping (bytes32 => string) public stringMapping; 
 
 
     event ProcessStarted(uint processId, string description, uint timestamp);
@@ -39,19 +39,6 @@ contract ProductionController is FactoryBoxRoles{
 
     function roleAssignment() public pure override returns(Constants.ClassType) {
         return Constants.ClassType.ProductionController;
-    }
-
-
-    // Set the location values
-    function setLocationValues(string memory key, string memory value) public {
-        bytes32 fixedKey = keccak256(abi.encodePacked(key));
-        stringMapping[fixedKey] = value;
-    }
-
-    // Function to get a string value from the mapping 
-    function getLocationValues(string memory key) public view returns (string memory ) {
-        bytes32 fixedKey = keccak256(abi.encodePacked(key));
-        return stringMapping[fixedKey];
     }
 
     function startProductionProcess(string memory description) external {

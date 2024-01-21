@@ -31,20 +31,22 @@ contract MaintenanceAgent is FactoryBoxRoles{
     }
 
     constructor() {
+        owner = msg.sender;
         emit Logging("CellMaintenanceAgent constructor has been called", "");
     }
 
-    function assignLogging(string memory _description, string memory _problemDefinition) public {
-        emit Logging(_description, _problemDefinition);
-    }
+    // function assignLogging(string memory _description, string memory _problemDefinition) public {
+    //     emit Logging(_description, _problemDefinition);
+    // }
 
     function roleAssignment() public pure override returns(Constants.ClassType) {
         return Constants.ClassType.MaintenanceAgent;
     }
 
-    function logMaintenanceTask(uint taskID, string memory taskDescription) external {
-        maintenanceTasks[taskID] = MaintenanceTask({
-            taskID: taskID,
+    function logMaintenanceTask(string memory taskDescription) external onlyOwner {
+        latestTaskID++;
+        maintenanceTasks[latestTaskID] = MaintenanceTask({
+            taskID: latestTaskID,
             taskDescription: taskDescription,
             assignedAgent: address(0),
             status: MaintenanceTaskStatus.Open,
@@ -64,6 +66,20 @@ contract MaintenanceAgent is FactoryBoxRoles{
 
         emit TaskLogged(taskID, task.taskDescription, assignedAgent, MaintenanceTaskStatus.InProgress, block.timestamp);
 
+    }
+
+    function completeTask(uint taskID) external onlyOwner {
+        require(taskID > 0 && taskID <= latestTaskID, "Invalid taskID");
+        MaintenanceTask storage task = maintenanceTasks[taskID];
+        require(task.status == MaintenanceTaskStatus.InProgress, "Task is not in progress");
+        task.status = MaintenanceTaskStatus.Completed;
+        emit TaskLogged(taskID, task.taskDescription, task.assignedAgent, MaintenanceTaskStatus.InProgress, block.timestamp);
+    }
+
+    function getTaskDetails(uint taskID) external view returns(string memory, address, MaintenanceTaskStatus, uint) {
+        require(taskID > 0 && taskID <= latestTaskID, "Invalid taskID");
+        MaintenanceTask storage maintenanceTask = maintenanceTasks[taskID];
+        return(maintenanceTask.taskDescription, maintenanceTask.assignedAgent, maintenanceTask.status, maintenanceTask.timestamp);
     }
 
 }

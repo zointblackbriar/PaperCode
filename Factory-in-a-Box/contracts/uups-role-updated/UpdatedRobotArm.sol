@@ -6,6 +6,8 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
+import "../factory-fundamental/FactoryBoxRoles.sol";
+import "../factory-fundamental/MachineOperationConstant.sol";
 
 import "hardhat/console.sol";
 import "../factory-fundamental/MachineOperationConstant.sol";
@@ -17,7 +19,8 @@ import "../factory-fundamental/MachineOperationConstant.sol";
 contract UpdatedRobotArm is Initializable, 
 UUPSUpgradeable, 
 OwnableUpgradeable,
-PausableUpgradeable {
+PausableUpgradeable,
+FactoryBoxRoles {
 
     uint public sampleVariable; 
 
@@ -31,8 +34,9 @@ PausableUpgradeable {
         return "Updated RobotArm Role";
     }
 
-    function setDifferentMachineryState(MachineOperationConstant.MachineOperation machineryState) public  {
+    function setDifferentMachineryState(MachineOperationConstant.MachineOperation machineryState) pure public  {
         // sampleVariable = 1;
+        machineryState = MachineOperationConstant.MachineOperation.Drilling; 
     }
 
     function addFunctionalityToRobotArm() external pure returns(string memory) {
@@ -61,5 +65,10 @@ PausableUpgradeable {
     function _onlyProxyPause() external onlyProxy {
         _pause();
     }
+
+    function roleAssignment() public pure override returns(Constants.ClassType) {
+        return Constants.ClassType.ProductionController;
+    }
+
 
 }

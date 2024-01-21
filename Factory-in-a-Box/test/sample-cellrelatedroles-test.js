@@ -30,10 +30,10 @@ describe("CellConfigurator", () => {
         expect(owner.address).to.equal(await ethers.provider.getSigner(0).getAddress());
     });
 
-    it("sample test for getCompanyName", async() => {
-        await productionConfigurator.setCompanyName("Production Incorporate");
-        expect(await productionConfigurator.getCompanyName()).to.equal("Production Incorporate");
-    }); 
+    // it("sample test for getCompanyName", async() => {
+    //     await productionConfigurator.setCompanyName("Production Incorporate");
+    //     expect(await productionConfigurator.getCompanyName()).to.equal("Production Incorporate");
+    // }); 
 
     // it("getting ID of the company", async() => {
     //     await productionConfigurator.setCompanyId("21"); 

@@ -34,7 +34,7 @@ module.exports = {
   
   gasReporter: {
     enabled: true, // gasReporter enabled
-    outputFile: "gas-report-testcases.out",
+    outputFile: "gas-report-testcases.txt",
     // currency: "USD",
     token: "ETH",
   },
