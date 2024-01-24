@@ -26,9 +26,6 @@ contract ProductionController is FactoryBoxRoles{
     mapping(uint => ProductionProcess) public productionProcess;
     uint public latestProcessId;
 
-    // Define a mapping that uses bytes 32 (fixed-size keys) to associate with string values.
-    // mapping (bytes32 => string) public stringMapping; 
-
 
     event ProcessStarted(uint processId, string description, uint timestamp);
     event QualityChecked(uint processId, QualityStatus qualityStatus, uint timestamp);

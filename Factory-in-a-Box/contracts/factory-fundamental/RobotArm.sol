@@ -47,7 +47,7 @@ contract RobotArm is FactoryBoxRoles{
         productionConfigurator.setMachineProcessConfiguration("sample key", MachineOperationConstant.MachineOperation.Reaming);
     }
 
-
+    // HELPER METHOD
     function getHashValue(string memory _id, string memory _text) public pure returns(bytes32) {
         return keccak256(abi.encodePacked(_id, _text));
     }

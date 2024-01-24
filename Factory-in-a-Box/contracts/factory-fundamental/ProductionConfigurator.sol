@@ -62,7 +62,7 @@ contract ProductionConfigurator is FactoryBoxRoles {
             configID: latestConfigID,
             processDescription: description,
             resourceAllocation: resourceAllocation,
-            timestamp: block.timestamp
+            timestamp: block.timestamp // timestamp from the blockchain
         });
 
         emit ProductionConfigured(latestConfigID, description, resourceAllocation, block.timestamp);
