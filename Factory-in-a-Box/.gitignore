@@ -8,3 +8,5 @@ typechain
 cache
 artifacts
 .openzeppelin
+.idea
+package-lock.json

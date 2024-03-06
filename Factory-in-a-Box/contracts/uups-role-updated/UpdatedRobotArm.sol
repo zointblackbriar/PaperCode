@@ -66,8 +66,8 @@ FactoryBoxRoles {
         _pause();
     }
 
-    function roleAssignment() public pure override returns(Constants.ClassType) {
-        return Constants.ClassType.ProductionController;
+    function roleAssignment() public pure override returns(Constants.RoleType) {
+        return Constants.RoleType.ProductionController;
     }
 
 

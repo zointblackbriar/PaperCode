@@ -35,8 +35,8 @@ contract MaintenanceAgent is FactoryBoxRoles{
         emit Logging("CellMaintenanceAgent constructor has been called", "");
     }
 
-    function roleAssignment() public pure override returns(Constants.ClassType) {
-        return Constants.ClassType.MaintenanceAgent;
+    function roleAssignment() public pure override returns(Constants.RoleType) {
+        return Constants.RoleType.MaintenanceAgent;
     }
 
     function logMaintenanceTask(string memory taskDescription) external onlyOwner {

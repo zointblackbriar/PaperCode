@@ -3,5 +3,5 @@ pragma solidity >=0.8.7;
 
 
 library Constants {
-    enum ClassType {ProductionConfigurator, ProductionController, MaintenanceAgent, RobotArm }
+    enum RoleType {ProductionConfigurator, ProductionController, MaintenanceAgent, RobotArm, Unassigned}
 }

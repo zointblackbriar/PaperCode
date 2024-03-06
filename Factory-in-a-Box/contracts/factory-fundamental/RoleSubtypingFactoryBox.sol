@@ -17,22 +17,22 @@ contract RoleSubtypingFactoryBox  {
         factoryboxroles[2] = FactoryBoxRoles(new MaintenanceAgent()); 
         factoryboxroles[3] = FactoryBoxRoles(new RobotArm());
 
-        if(factoryboxroles[0].roleAssignment() == Constants.ClassType.ProductionConfigurator) {
+        if(factoryboxroles[0].roleAssignment() == Constants.RoleType.ProductionConfigurator) {
             emit Logging("ProductionConfigurator Role");
             sampleReturn[0] = "ProductionConfigurator";
         }
 
-        if(factoryboxroles[1].roleAssignment() == Constants.ClassType.ProductionController) {
+        if(factoryboxroles[1].roleAssignment() == Constants.RoleType.ProductionController) {
             emit Logging("ProductionController Role"); 
             sampleReturn[1] = "ProductionController"; 
         }
 
-        if(factoryboxroles[2].roleAssignment() == Constants.ClassType.MaintenanceAgent) {
+        if(factoryboxroles[2].roleAssignment() == Constants.RoleType.MaintenanceAgent) {
             emit Logging("MaintenanceAgent Role");
             sampleReturn[2] = "MaintenanceAgent";
         }
         
-        if(factoryboxroles[3].roleAssignment() == Constants.ClassType.RobotArm) {
+        if(factoryboxroles[3].roleAssignment() == Constants.RoleType.RobotArm) {
             emit Logging("RobotArm Role");
             sampleReturn[3] = "RobotArm";
         }

@@ -43,8 +43,8 @@ contract ProductionConfigurator is FactoryBoxRoles {
     }
 
 
-    function roleAssignment() public pure override returns(Constants.ClassType) {
-        return Constants.ClassType.ProductionConfigurator;
+    function roleAssignment() public pure override returns(Constants.RoleType) {
+        return Constants.RoleType.ProductionConfigurator;
     }
 
     function setMachineProcessConfiguration(string memory machineAssetID, MachineOperationConstant.MachineOperation machineOperation) public {

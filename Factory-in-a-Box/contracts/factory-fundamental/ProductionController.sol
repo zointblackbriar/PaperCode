@@ -11,7 +11,6 @@ import "./FactoryBoxRoles.sol";
 // and perform maintenance plan.
 contract ProductionController is FactoryBoxRoles{
 
-
     event Logging(string description);
 
     enum QualityStatus {Pending, Approved, Rejected}
@@ -34,8 +33,8 @@ contract ProductionController is FactoryBoxRoles{
         emit Logging("productionConfigurator constructor has been called");
     }
 
-    function roleAssignment() public pure override returns(Constants.ClassType) {
-        return Constants.ClassType.ProductionController;
+    function roleAssignment() public pure override returns(Constants.RoleType) {
+        return Constants.RoleType.ProductionController;
     }
 
     function startProductionProcess(string memory description) external {

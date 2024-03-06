@@ -26,8 +26,8 @@ contract RobotArm is FactoryBoxRoles{
         emit Logging("Cobot Role has been activated");
     }
 
-    function roleAssignment() public pure override returns(Constants.ClassType) {
-        return Constants.ClassType.RobotArm;
+    function roleAssignment() public pure override returns(Constants.RoleType) {
+        return Constants.RoleType.RobotArm;
     }
 
     function checkPartRobotArm(uint256 partId, Partstatus newStatus, string memory newDescription) external {
