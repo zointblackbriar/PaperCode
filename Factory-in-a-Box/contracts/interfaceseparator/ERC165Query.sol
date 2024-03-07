@@ -1,8 +1,7 @@
-// SPDX-License-Identifier: AGPL-3.0
-// pragma solidity >=0.7.0 <0.9.0;
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.8.7;
 
-/// @notice ERC165 Query for interface separator @source: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-165.md#test-cases
+/// @notice ERC165 Query for interface separator
 /// @dev Interface identification is specified in ERC-165. This function
 /// @dev `invalidID` in case of 0xffffffff, `false` otherwise
 contract ERC165Query {

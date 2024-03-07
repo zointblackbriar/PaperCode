@@ -5,21 +5,30 @@ import "../interfaceseparator/ERC165Query.sol";
 import "./MediatorInterface.sol";
 import "../interfaceseparator/InterfaceIds.sol";
 
-
+/// @title Mediator desing pattern for role operations
 contract Mediator is MediatorInterface, ERC165Query{
     mapping(bytes4 => bool) private supportedInterfaces; 
+    mapping(string => string) private observerLists;
+    bool isObserverSuitable;
     constructor() {
         //Example: Supports ERC165 itself
         supportedInterfaces[0x01ffc9a7] = true; //ERC165
     }
 
-    function supportsInterface(
-        bytes4 interfaceID
-    ) external pure override returns (bool) {
-        return
-            interfaceID == this.supportsInterface.selector || // ERC165 Separator
+    function supportsInterface(bytes4 interfaceID ) external pure override returns (bool) {
+        return interfaceID == this.supportsInterface.selector || // ERC165 Separator
             // interfaceID == this.addRole.selector ^ this.bindRole.selector ^ this.invokeRole.selector ^ this.getRole.selector ; // Mediator.sol
             interfaceID == InterfaceIds.MEDIATOR_ID; //Mediator Pattern
+    }
+
+    function addObserver(bytes4 _observerSpecification, address _observer) public {
+        require(_observer != address(0), "observer should not be null address. Address should be legitimate");
+        // address of the contract and interfaceID
+        isObserverSuitable = doesContractImplementInterface(
+            _observer, _observerSpecification
+        );
+        require(isObserverSuitable, "observer should not be");
+        // observerLists.push();
     }
 
 

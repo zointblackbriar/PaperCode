@@ -3,6 +3,8 @@ pragma solidity >=0.8.7;
 
 import "./FactoryBoxRoles.sol";
 
+/// @title Maintenance Agent Role Contract
+/// @author Orcun Oruc
 contract MaintenanceAgent is FactoryBoxRoles{
     event Logging(string description, string problemDefinition); 
 
@@ -38,7 +40,7 @@ contract MaintenanceAgent is FactoryBoxRoles{
     function roleAssignment() public pure override returns(Constants.RoleType) {
         return Constants.RoleType.MaintenanceAgent;
     }
-
+    /// @dev logging task for the maintenance steps
     function logMaintenanceTask(string memory taskDescription) external onlyOwner {
         latestTaskID++;
         maintenanceTasks[latestTaskID] = MaintenanceTask({

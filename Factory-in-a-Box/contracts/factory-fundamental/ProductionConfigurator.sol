@@ -42,11 +42,12 @@ contract ProductionConfigurator is FactoryBoxRoles {
         owner = msg.sender;
     }
 
-
+    /// @dev constant-based role assignment
     function roleAssignment() public pure override returns(Constants.RoleType) {
         return Constants.RoleType.ProductionConfigurator;
     }
 
+    /// @dev machine operation has been set
     function setMachineProcessConfiguration(string memory machineAssetID, MachineOperationConstant.MachineOperation machineOperation) public {
         machineProcessConfiguration[machineAssetID] = machineOperation;
     }
