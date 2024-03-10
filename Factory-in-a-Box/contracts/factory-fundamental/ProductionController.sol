@@ -2,6 +2,7 @@
 pragma solidity >=0.8.7; 
 
 import "./FactoryBoxRoles.sol";
+import "../factory-patterns/mediator/Role.sol";
 
 /// @dev this will check the location of the machinnery
 /// @dev The Cell Designer is used to create a layout of the cell using drag-and-drop techniques.
