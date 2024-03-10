@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.7;
-import "../factory-patterns/MediatorInterface.sol";
-import "../factory-patterns/ChainOfResponsibility.sol";
+import "../factory-patterns/mediator/MediatorInterface.sol";
+import "../factory-patterns/chainofresponsibility/ChainOfResponsibilityHandler.sol";
 
 library InterfaceIds {
     bytes4 constant MEDIATOR_ID = type(MediatorInterface).interfaceId;
