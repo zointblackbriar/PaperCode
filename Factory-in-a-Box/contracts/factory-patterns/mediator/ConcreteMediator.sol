@@ -4,13 +4,13 @@ pragma solidity >=0.8.7;
 // import "./Mediator.sol";
 import "./Role.sol";
 import "./RoleGenerator.sol";
-import "./MediatorInterface.sol";
+import "./Mediator.sol";
 import "../../interfaceseparator/ERC165.sol";
 import "../../interfaceseparator/ERC165Query.sol";
 import "../../interfaceseparator/InterfaceIds.sol";
 
-contract ConcreteMediator is MediatorInterface, ERC165Query, ERC165, RoleGenerator{
-    // RoleReceiver private _roleReceiver;
+contract ConcreteMediator is Mediator, ERC165Query, ERC165, RoleGenerator{ // Mediator is an interface
+    // RoleReceiver private _roleReceiver; 
     mapping(bytes32 => Role) public assignedRoles;
     bool public isMediator;
     event Logging(string description);
@@ -21,15 +21,6 @@ contract ConcreteMediator is MediatorInterface, ERC165Query, ERC165, RoleGenerat
         sampleMessage = "Concrete Mediator message";
     }
 
-    // implementation of the addRole
-    // function addRole(bytes32 _roleSpecification, address _role) override public  {
-    //     require(_role != address(0x0), "address should be different from null value");
-    //     Role role = rg.roleGenerate(_roleSpecification);
-    //     assignedRoles[_roleSpecification] = role;
-    // }
-
-    //implementation of the bindRole()
-    // activation of the mediator address
     function bindRole(bytes32 _roleSpecification, address _role) override public {
         require(_role != address(0x0), "a role should have an address");
         // require(isMediatorRole, "Mediator has been activated");
@@ -38,9 +29,6 @@ contract ConcreteMediator is MediatorInterface, ERC165Query, ERC165, RoleGenerat
             _role, InterfaceIds.MEDIATOR_ID
         );
         require(isMediator, "Mediator has been activated");
-        // Mediator mediator = new Mediator();
-
-        // mediator.bindRole(_roleSpecification, _role);
     }
 
     function unbindRole(bytes32 _roleSpecification) override public {
@@ -48,7 +36,6 @@ contract ConcreteMediator is MediatorInterface, ERC165Query, ERC165, RoleGenerat
     }
 
 
-    // implementation of the getRole()
     function getRole(bytes32 _roleSpecification) public override returns (Role role) {
         emit Logging("getRole has been activated");
         return assignedRoles[_roleSpecification];
@@ -70,8 +57,14 @@ contract ConcreteMediator is MediatorInterface, ERC165Query, ERC165, RoleGenerat
     }
 
 
-    function roleGenerate(bytes32 _roleSpecification) public override returns(Role) {
-        return new Role(_roleSpecification);
+    function roleGenerate(address _roleAddress, address _mediator) public override returns(Role) {
+        isMediator = doesContractImplementInterface(
+            _roleAddress, InterfaceIds.MEDIATOR_ID
+        );
+        require(isMediator, "Mediator has been Activated");
+        Mediator mediatorInterfaceInstance;
+
+        // return new Role(_roleAddress, mediatorInterfaceInstance);
     }
 
 

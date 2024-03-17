@@ -5,9 +5,8 @@ import "../../interfaceseparator/ERC165.sol";
 import "../../interfaceseparator/InterfaceIds.sol";
 import "../../interfaceseparator/ERC165Query.sol";
 import "./ChainOfResponsibilityHandler.sol";
-import "./ConcreteHandler1.sol";
-import "./ConcreteHandler2.sol";
-import "./ConcreteHandler3.sol";
+import "./BasicRole.sol";
+import "./SuperRole.sol";
 
 /// @title Chain Of Responsibility Design Pattern for Role Operations
 contract RoleAssignmentChainOfResponsibility is ERC165Query{
@@ -25,30 +24,29 @@ contract RoleAssignmentChainOfResponsibility is ERC165Query{
 
 
     function testHandlers(address _chainResponseAddress, bytes4 _chainOfResponsibility) public {
-        ChainOfResponsibilityHandler sampleConcrete1 = new ConcreteHandler1();
-        ChainOfResponsibilityHandler sampleConcrete2 = new ConcreteHandler2();  
-        ChainOfResponsibilityHandler sampleConcrete3 = new ConcreteHandler3();
+        ChainOfResponsibilityHandler superConcreteRole = new SuperRole();
+        ChainOfResponsibilityHandler basicConcreteRole = new BasicRole();  
 
         isChainResponsibilitySuitable = doesContractImplementInterface(
             _chainResponseAddress, _chainOfResponsibility
         );
         require(isChainResponsibilitySuitable, "interface of the chain of responsibility is not correct");
 
-        sampleConcrete1.setNext(sampleConcrete2);
-        sampleConcrete2.setNext(sampleConcrete3);
+        basicConcreteRole.setNext(superConcreteRole);
+        // basicConcreteRole.setNext(roleSubtyping);
 
         //Three simulation step
         string memory result;
         for (uint256 i = 0; i < 3; i++) { 
             if (i == 0) {
-                result = sampleConcrete1.handle(bytes("Maintenance Task"));
+                result = superConcreteRole.handle(bytes("Maintenance Task"));
                 emit Logging(result);
             } else if(i == 1) {
-                result = sampleConcrete1.handle(bytes("Configuration of Production Process"));
+                result = basicConcreteRole.handle(bytes("Configuration of Production Process"));
                 emit Logging(result);
             } else {
-                result = sampleConcrete1.handle(bytes("Fault Record on the Transportation"));
-                emit Logging(result);
+                // result = roleSubtyping.handle(bytes("Fault Record on the Transportation"));
+                emit Logging("Role subtyping has no handle function. It can be subtyped");
             }
 
         }

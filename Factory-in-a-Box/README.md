@@ -50,3 +50,49 @@ MIT License
     - Reaming: 
         - The system shall support reaming operations for achieving high-precision hole dimensions.
         - It should accommodate different reaming tools and materials.
+
+
+## Some library requirements
+
+For Slither package, you need to install the following libraries: 
+
+```bash
+pip install virtualenv
+python3 -m venv venv
+source venv/Scripts/activate # in windows
+source venv/bin/activate # in Unix
+python3 -m pip install slither-analyzer
+```
+
+In windows you need to use WSL: 
+
+```bash
+open wsl terminal
+sudo add-apt-repository ppa:ethereum/ethereum
+sudo apt-get update
+sudo apt-get install solc
+pip3 install mythril
+pip3 install slither-analyzer
+```
+
+Slither command: 
+
+```bash
+slither sample.sol
+```
+
+Mythril command
+
+```bash
+myth analyze contracts/factory-patterns/chainofresponsibility/Role.sol
+```
+
+Usage of the Oyente tool: 
+
+```bash 
+docker pull luongnguyen/oyente
+docker run -i -t luongnguyen/oyente # connect to the console of oyente tool
+# in the docker container
+python oyente/oyente.py -s smartcontract.sol #analyze the smart contract
+```
+
