@@ -2,36 +2,32 @@ const {expect} = require('chai');
 const {ethers} = require('hardhat');
 
 describe(' Chain of Responsibility Contracts', function() {
-    let ConcreteHandler1, ConcreteHandler2, Client, RequestHandler;
-    let concreteHandler1, concreteHandler2, client, requestHandler;
+    let basicRole, BasicRole, superRole, SuperRole;
 
     beforeEach(async function() {
-        ConcreteHandler1 = await ethers.getContractFactory('ConcreteHandler1');
-        ConcreteHandler2 = await ethers.getContractFactory('ConcreteHandler2');
-        RequestHandler = await ethers.getContractFactory('RequestHandler');
-        Client = await ethers.getContractFactory('Client');
-        // requestHandler = await RequestHandler.deploy(); 
-        concreteHandler1 = await ConcreteHandler1.deploy();
-        concreteHandler2 = await ConcreteHandler2.deploy();
-        requestHandler = await RequestHandler.deploy();
-        await concreteHandler1.setNextHandler(concreteHandler2.address);
-        client = await Client.deploy(requestHandler.address);
-        // console.log("concretedHandler1: ", concreteHandler1);
-        // console.log("concretedHandler2: ", concreteHandler2);
-        // await concreteHandler1.setNextHandler(concreteHandler2.nextHandler);
+        [owner] = await ethers.getSigners();
+        BasicRole = await ethers.getContractFactory("BasicRole");
+        basicRole = await BasicRole.deploy();
+        await basicRole.deployed();
+        SuperRole = await ethers.getContractFactory("SuperRole");
+        superRole = await SuperRole.deploy();
+        await superRole.deployed();
+
     });
 
     it("should handle requests correctly", async function() {
-        //Test with amounts within each handler's range 
-        console.log(await client.processRequest(400));
-        expect(await client.stateVariable()).to.be.equal(true);
-        await client.processRequest(10);
-        expect(await client.stateVariable()).to.be.equal(false);
+        roleText1 = "Robotarm role"
+        roleText2 = "Production Controller Super Role"
+        const encoder = new TextEncoder();
+        const encodedArray = encoder.encode(roleText1);
+        const encodedArray2 = encoder.encode(roleText1);
+        const bytes1 = new Uint32Array(encodedArray);
+        const bytes2 = new Uint32Array(encodedArray2);
+        console.log(bytes1)
+        console.log(bytes2)
 
-        // expect(await client.processRequest(50)).to.be.equal(true);
-        // expect(await client.processRequest(200)).to.be.equal(true); 
-        // Test with amounts outside both handlers' range
-        // expect(await client.processRequest(500)).to.be.equal(false); //Expect false
+        await basicRole.handle(bytes1);
+        await superRole.handle(bytes2);
     });
 });
 

@@ -21,7 +21,7 @@ contract ConcreteMediator is Mediator, ERC165Query, ERC165, RoleGenerator{ // Me
         sampleMessage = "Concrete Mediator message";
     }
 
-    function bindRole(bytes32 _roleSpecification, address _role) override public {
+    function bindRole(address _role) override public {
         require(_role != address(0x0), "a role should have an address");
         // require(isMediatorRole, "Mediator has been activated");
         emit Logging("bindRole has been activated");

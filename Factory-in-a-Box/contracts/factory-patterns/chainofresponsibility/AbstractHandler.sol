@@ -21,7 +21,7 @@ abstract contract AbstractHandler is ChainOfResponsibilityHandler {
 
     function supportsInterface(bytes4 interfaceID) external pure override returns (bool) {
         // return interfaceID == this.supportsInterface.selector || // ERC165 Separator
-        return interfaceID == 0x01ffc9a7 || interfaceID == InterfaceIds.CHAIN_RESPONSE; //Mediator Pattern
+        return interfaceID == 0x01ffc9a7 || interfaceID == InterfaceIds.CHAIN_RESPONSE; //Chain of Responsibility Pattern
     }
 
 }
