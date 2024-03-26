@@ -7,7 +7,7 @@ interface Mediator{
 
     function bindRole(address _roleAddress) external;
 
-    function unbindRole(bytes32 _roleSpecification) external;
+    function unbindRole(address _roleAddress) external;
 
-    function getRole(bytes32 _roleSpecification) external returns(Role role); // sendMessage() method invocation in design pattern
+    function getRole(address _roleAddress) external returns(Role role); // sendMessage() method invocation in design pattern
 }

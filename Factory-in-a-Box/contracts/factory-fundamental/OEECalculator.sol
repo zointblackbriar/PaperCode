@@ -31,6 +31,7 @@ contract OEECalculator {
 
 
     function updateOEE() public {
+        // use safemath in order to provide error-free which are regarding to overflow and underflow errors.
         uint256 availability = (operatingTime.mul(100)).div(scheduledProductionTime);
         uint256 performance = (totalUnitsProduced.mul(100)).div(operatingTime.mul(1 ether));
         uint256 quality = (goodUnits.mul(100)).div(totalUnitsProduced);
