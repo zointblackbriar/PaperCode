@@ -4,28 +4,34 @@ const { utils } = require ("ethers");
 
 
 describe("MediatorPatternContract Testing", async function() {
-    let MediatorPattern;
-    let mediatorPattern;
+    // let MediatorPattern;
+    // let mediatorPattern;
+    let ConcreteMediator;
+    let concreteMediator;
     let owner;
     let Role;
     let role;
 
     beforeEach(async function() {
         [owner] = await ethers.getSigners();
-        MediatorPattern = await ethers.getContractFactory("Mediator");
-        mediatorPattern = await MediatorPattern.deploy();
-        await mediatorPattern.deployed();
+        // MediatorPattern = await ethers.getContractFactory("Mediator");
+        // mediatorPattern = await MediatorPattern.deploy();
+        // await mediatorPattern.deployed();
 
-        Role = await ethers.getContractFactory("Role");
-        role = await Role.deploy();
-        await role.deployed();
+        ConcreteMediator = await ethers.getContractFactory("ConcreteMediator");
+        concreteMediator = await ConcreteMediator.deploy();
+        await concreteMediator.deployed();
+
+        // Role = await ethers.getContractFactory("Role");
+        // // role = await Role.deploy();
+        // await role.deployed();
     });
 
     it.skip("should bind a role correctly", async function() {
         // TODO: interface id comparison
-        const roleSpec = "admin role";
-        const Role = await Role.deploy();
-        await Role.deploy();
+        // const roleSpec = "admin role";
+        // const Role = await Role.deploy();
+        // await Role.deploy();
         await concreteMediator.bindRole(roleSpec, Role.address);
     });
 
