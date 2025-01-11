@@ -8,9 +8,9 @@ describe("MediatorPatternContract Testing", async function() {
     // let mediatorPattern;
     let ConcreteMediator;
     let concreteMediator;
+    let ProductionControllerRole;
+    let productionControllerRole;
     let owner;
-    let Role;
-    let role;
 
     beforeEach(async function() {
         [owner] = await ethers.getSigners();
@@ -21,42 +21,25 @@ describe("MediatorPatternContract Testing", async function() {
         ConcreteMediator = await ethers.getContractFactory("ConcreteMediator");
         concreteMediator = await ConcreteMediator.deploy();
         await concreteMediator.deployed();
+        
+        ProductionControllerRole = await ethers.getContractFactory("ProductionControllerRole");
+        productionControllerRole = await ProductionControllerRole.deploy();
+        await productionControllerRole.deployed();
 
-        // Role = await ethers.getContractFactory("Role");
-        // // role = await Role.deploy();
-        // await role.deployed();
     });
 
-    it.skip("should bind a role correctly", async function() {
-        // TODO: interface id comparison
-        // const roleSpec = "admin role";
-        // const Role = await Role.deploy();
-        // await Role.deploy();
-        await concreteMediator.bindRole(roleSpec, Role.address);
+    it("should bind a role correctly", async function() {
+        await concreteMediator.bindRole(productionControllerRole.address);
+        const retrievedRole = await concreteMediator.getRole(productionControllerRole.address);
+        expect(retrievedRole).not.to.equal(ethers.constants.AddressZero)
     });
 
-    it.skip("should unbind a role correctly", async function() {
-        const roleSpec = "admin";
-        const Role = await Role.deploy();
-        await concreteMediator.bindRole(roleSpec, Role.address);
-        await concreteMediator.unbindRole(roleSpec);
-        const retrievedRole = await concreteMediator.getRole(roleSpec);
-        expect(retrievedRole).to.equal(ethers.constants.AddressZero);
+    it("should unbind a role correctly", async function() {
+        await concreteMediator.unbindRole(productionControllerRole.address);
+        let assignedRole = await concreteMediator.assignedRoles(productionControllerRole.address);
+        const retrievedRole = await concreteMediator.getRole(productionControllerRole.address);
+        expect(retrievedRole.value).to.equal(0);
     });
 
-    it.skip("should set mediator correctly", async function() {
-        const mediatorAddress = await Role.deploy();
-        await mediatorAddress.deployed();
-        await concreteMediator.setMediator(mediatorAddress.address);
-        const isMediator = await concreteMediator.isMediator();
-        expect(isMediator).to.equal(true);
-    });
-    
-    it.skip("should generate role correctly", async function() {
-        const generatedRole = await concreteMediator.roleGenerate(roleAddress.address, concreteMediator.address);
-        const isMediator = await generatedRole.isMediator();
-
-        expect(isMediator).to.equal(true);
-    });
 
 });

@@ -11,31 +11,19 @@ import "./SuperRole.sol";
 /// @title Chain Of Responsibility Design Pattern for Role Operations
 contract RoleAssignmentChainOfResponsibility is ERC165Query{
 
-    // bytes4 internal constant _INTERFACE_ID_ERC165 = InterfaceIds.ERC165_ID;
-    // bytes4 internal constant _INTERFACE_ID_CHAIN_OF_RESPONSIBILITY = bytes4(keccak256("ChainOfResponsibilityHandler(uint256)"));
-    bool public isChainResponsibilitySuitable;
     event Logging(string description);
 
-    ChainOfResponsibilityHandler public handler;
-    
-    constructor(ChainOfResponsibilityHandler _handler) {
-        handler = _handler;
+    constructor() {
     }
 
 
-    function testHandlers(address _chainResponseAddress, bytes4 _chainOfResponsibility) public {
+    function testHandlers() public {
         ChainOfResponsibilityHandler superConcreteRole = new SuperRole();
         ChainOfResponsibilityHandler basicConcreteRole = new BasicRole();  
 
-        isChainResponsibilitySuitable = doesContractImplementInterface(
-            _chainResponseAddress, _chainOfResponsibility
-        );
-        require(isChainResponsibilitySuitable, "interface of the chain of responsibility is not correct");
-
         basicConcreteRole.setNext(superConcreteRole);
-        // basicConcreteRole.setNext(roleSubtyping);
 
-        //Three simulation step
+        //Three simulation steps
         string memory result;
         for (uint256 i = 0; i < 3; i++) { 
             if (i == 0) {

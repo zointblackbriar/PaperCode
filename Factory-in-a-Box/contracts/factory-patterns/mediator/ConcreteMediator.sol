@@ -1,9 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.7; 
 
-// import "./Mediator.sol";
 import "./Role.sol";
-// import "./RoleGenerator.sol";
 import "./Mediator.sol";
 
 contract ConcreteMediator is Mediator{ // Mediator is an interface
@@ -18,10 +16,6 @@ contract ConcreteMediator is Mediator{ // Mediator is an interface
         require(_roleAddress != address(0x0), "a role should have an address");
         // require(isMediatorRole, "Mediator has been activated");
         emit Logging("bindRole has been activated");
-        // isMediator = doesContractImplementInterface(
-        //     _role, InterfaceIds.MEDIATOR_ID
-        // );
-        // require(isMediator, "Mediator has been activated");
     }
 
     function unbindRole(address _roleAddress) override public {

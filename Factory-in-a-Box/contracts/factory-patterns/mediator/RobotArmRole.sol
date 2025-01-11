@@ -1,6 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.7;
 import "./RoleImplementor.sol";
+import "./ConcreteMediator.sol";
 
 contract RobotArmRole{
     event Logging(string description, bytes32 data);

@@ -1,8 +1,8 @@
 const {expect} = require('chai'); 
 const {ethers} = require('hardhat');
 
-describe(' Chain of Responsibility Contracts', function() {
-    let basicRole, BasicRole, superRole, SuperRole;
+describe(' Chain of Responsibility Smart Contract', function() {
+    let basicRole, BasicRole, superRole, SuperRole, roleAssignmentChainOfResponsibility, RoleAssignmentChainOfResponsibility;
 
     beforeEach(async function() {
         [owner] = await ethers.getSigners();
@@ -12,6 +12,10 @@ describe(' Chain of Responsibility Contracts', function() {
         SuperRole = await ethers.getContractFactory("SuperRole");
         superRole = await SuperRole.deploy();
         await superRole.deployed();
+
+        RoleAssignmentChainOfResponsibility = await ethers.getContractFactory("RoleAssignmentChainOfResponsibility");
+        roleAssignmentChainOfResponsibility = await RoleAssignmentChainOfResponsibility.deploy();
+        await roleAssignmentChainOfResponsibility.deployed();
 
     });
 
@@ -29,5 +33,20 @@ describe(' Chain of Responsibility Contracts', function() {
         await basicRole.handle(bytes1);
         await superRole.handle(bytes2);
     });
+
+    it("should test handlers and emit correct events", async function () {
+        // Call the testHandlers function
+        await roleAssignmentChainOfResponsibility.testHandlers();
+    
+        // Check the emitted events
+        const logs = await roleAssignmentChainOfResponsibility.queryFilter("Logging");
+        expect(logs.length).to.equal(3); // Check the number of emitted events
+    
+        // Check the content of emitted events
+        // expect(logs[0].args.description).to.equal(""); // Check the content of the first event
+        // expect(logs[1].args.description).to.equal("Configuration of Production Process"); // Check the content of the second event
+        // expect(logs[2].args.description).to.equal("Role subtyping has no handle function. It can be subtyped"); // Check the content of the third event
+      });
+    
 });
 

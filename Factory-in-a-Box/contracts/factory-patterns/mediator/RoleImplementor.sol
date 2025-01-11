@@ -18,8 +18,6 @@ abstract contract RoleImplementor is ERC165Query, ERC165, Role{
             interfaceID == InterfaceIds.MEDIATOR_ID; //Mediator Pattern
     }
 
-
-
     ///@dev create random bytes32 in Role Generator
     function generateRandomRoleData(address _roleAddress, address _addressOfMediator) external returns (bytes32) {
         isRole = doesContractImplementInterface(_roleAddress,  InterfaceIds.ROLE_ID);
@@ -32,8 +30,6 @@ abstract contract RoleImplementor is ERC165Query, ERC165, Role{
         // Role role = Role(_roleAddress);
 
         return randomRoleData;
-
-
     }
 
 }
